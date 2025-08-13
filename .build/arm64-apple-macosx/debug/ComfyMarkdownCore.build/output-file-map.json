@@ -1,0 +1,35 @@
+{
+  "": {
+    "swift-dependencies": "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownCore.build/master.swiftdeps"
+  },
+  "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/Sources/ComfyMarkdownCore/ComfyMarkdownCore.swift": {
+    "dependencies": "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownCore.build/ComfyMarkdownCore.d",
+    "object": "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownCore.build/ComfyMarkdownCore.swift.o",
+    "swiftmodule": "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownCore.build/ComfyMarkdownCore~partial.swiftmodule",
+    "swift-dependencies": "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownCore.build/ComfyMarkdownCore.swiftdeps"
+  },
+  "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/Sources/ComfyMarkdownCore/Models/MarkdownAST.swift": {
+    "dependencies": "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownCore.build/MarkdownAST.d",
+    "object": "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownCore.build/MarkdownAST.swift.o",
+    "swiftmodule": "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownCore.build/MarkdownAST~partial.swiftmodule",
+    "swift-dependencies": "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownCore.build/MarkdownAST.swiftdeps"
+  },
+  "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/Sources/ComfyMarkdownCore/Models/MarkdownNode.swift": {
+    "dependencies": "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownCore.build/MarkdownNode.d",
+    "object": "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownCore.build/MarkdownNode.swift.o",
+    "swiftmodule": "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownCore.build/MarkdownNode~partial.swiftmodule",
+    "swift-dependencies": "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownCore.build/MarkdownNode.swiftdeps"
+  },
+  "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/Sources/ComfyMarkdownCore/Models/MarkdownNodeType.swift": {
+    "dependencies": "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownCore.build/MarkdownNodeType.d",
+    "object": "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownCore.build/MarkdownNodeType.swift.o",
+    "swiftmodule": "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownCore.build/MarkdownNodeType~partial.swiftmodule",
+    "swift-dependencies": "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownCore.build/MarkdownNodeType.swiftdeps"
+  },
+  "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/Sources/ComfyMarkdownCore/Utils/Parser.swift": {
+    "dependencies": "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownCore.build/Parser.d",
+    "object": "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownCore.build/Parser.swift.o",
+    "swiftmodule": "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownCore.build/Parser~partial.swiftmodule",
+    "swift-dependencies": "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownCore.build/Parser.swiftdeps"
+  }
+}

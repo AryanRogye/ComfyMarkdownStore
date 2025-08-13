@@ -1,0 +1,4 @@
+module ComfyMarkdownCore {
+    header "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownCore.build/ComfyMarkdownCore-Swift.h"
+    requires objc
+}

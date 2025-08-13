@@ -1,0 +1,4 @@
+module ComfyMarkdownStorePackageTests {
+    header "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownStorePackageTests.build/ComfyMarkdownStorePackageTests-Swift.h"
+    requires objc
+}

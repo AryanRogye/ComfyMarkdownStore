@@ -1,0 +1,11 @@
+{
+  "": {
+    "swift-dependencies": "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownStorePackageTests.build/master.swiftdeps"
+  },
+  "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownStorePackageTests.derived/runner.swift": {
+    "dependencies": "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownStorePackageTests.build/runner.d",
+    "object": "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownStorePackageTests.build/runner.swift.o",
+    "swiftmodule": "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownStorePackageTests.build/runner~partial.swiftmodule",
+    "swift-dependencies": "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownStorePackageTests.build/runner.swiftdeps"
+  }
+}

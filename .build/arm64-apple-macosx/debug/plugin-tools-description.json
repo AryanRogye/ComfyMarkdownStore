@@ -1,0 +1,1390 @@
+{
+  "builtTestProducts" : [
+    {
+      "binaryPath" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownStorePackageTests.xctest/Contents/MacOS/ComfyMarkdownStorePackageTests",
+      "packagePath" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore",
+      "productName" : "ComfyMarkdownStorePackageTests"
+    }
+  ],
+  "copyCommands" : {
+
+  },
+  "explicitTargetDependencyImportCheckingMode" : {
+    "none" : {
+
+    }
+  },
+  "generatedSourceTargetSet" : [
+
+  ],
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.ComfyMarkdownCore-arm64-apple-macosx16.0-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownCore.build/sources",
+      "importPath" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/Sources/ComfyMarkdownCore/ComfyMarkdownCore.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/Sources/ComfyMarkdownCore/Models/MarkdownAST.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/Sources/ComfyMarkdownCore/Models/MarkdownNode.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/Sources/ComfyMarkdownCore/Models/MarkdownNodeType.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/Sources/ComfyMarkdownCore/Utils/Parser.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/arena.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/blocks.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/buffer.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/cmark.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/cmark_ctype.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/commonmark.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/footnotes.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/houdini_href_e.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/houdini_html_e.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/houdini_html_u.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/html.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/inlines.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/iterator.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/latex.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/linked_list.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/man.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/map.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/node.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/plaintext.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/plugin.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/references.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/registry.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/render.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/scanners.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/syntax_extension.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/utf8.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/xml.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm_extensions.build/autolink.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm_extensions.build/core-extensions.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm_extensions.build/ext_scanners.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm_extensions.build/strikethrough.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm_extensions.build/table.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm_extensions.build/tagfilter.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm_extensions.build/tasklist.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownCore.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "ComfyMarkdownCore",
+      "moduleOutputPath" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/Modules/ComfyMarkdownCore.swiftmodule",
+      "objects" : [
+        "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownCore.build/ComfyMarkdownCore.swift.o",
+        "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownCore.build/MarkdownAST.swift.o",
+        "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownCore.build/MarkdownNode.swift.o",
+        "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownCore.build/MarkdownNodeType.swift.o",
+        "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownCore.build/Parser.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx12.0",
+        "-enable-batch-mode",
+        "-index-store-path",
+        "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j11",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-Xcc",
+        "-fmodule-map-file=/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/checkouts/swift-cmark/src/include/module.modulemap",
+        "-Xcc",
+        "-I",
+        "-Xcc",
+        "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/checkouts/swift-cmark/src/include",
+        "-Xcc",
+        "-fmodule-map-file=/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/checkouts/swift-cmark/extensions/include/module.modulemap",
+        "-Xcc",
+        "-I",
+        "-Xcc",
+        "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/checkouts/swift-cmark/extensions/include",
+        "-module-cache-path",
+        "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownCore.build/ComfyMarkdownCore-Swift.h",
+        "-color-diagnostics",
+        "-swift-version",
+        "6",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "comfymarkdownstore"
+      ],
+      "outputFileMapPath" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownCore.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownCore.build/ComfyMarkdownCore.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownCore.build/MarkdownAST.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownCore.build/MarkdownNode.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownCore.build/MarkdownNodeType.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownCore.build/Parser.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/Modules/ComfyMarkdownCore.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/Sources/ComfyMarkdownCore/ComfyMarkdownCore.swift",
+        "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/Sources/ComfyMarkdownCore/Models/MarkdownAST.swift",
+        "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/Sources/ComfyMarkdownCore/Models/MarkdownNode.swift",
+        "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/Sources/ComfyMarkdownCore/Models/MarkdownNodeType.swift",
+        "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/Sources/ComfyMarkdownCore/Utils/Parser.swift"
+      ],
+      "tempsPath" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownCore.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.ComfyMarkdownCoreTests-arm64-apple-macosx16.0-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownCoreTests.build/sources",
+      "importPath" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/Tests/ComfyMarkdownCoreTests/ComfyMarkdownCoreTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/Modules/ComfyMarkdownCore.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownCoreTests.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "ComfyMarkdownCoreTests",
+      "moduleOutputPath" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/Modules/ComfyMarkdownCoreTests.swiftmodule",
+      "objects" : [
+        "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownCoreTests.build/ComfyMarkdownCoreTests.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx14.0",
+        "-enable-batch-mode",
+        "-index-store-path",
+        "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-Xfrontend",
+        "-enable-cross-import-overlays",
+        "-j11",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-Xcc",
+        "-fmodule-map-file=/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/checkouts/swift-cmark/extensions/include/module.modulemap",
+        "-Xcc",
+        "-I",
+        "-Xcc",
+        "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/checkouts/swift-cmark/extensions/include",
+        "-Xcc",
+        "-fmodule-map-file=/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/checkouts/swift-cmark/src/include/module.modulemap",
+        "-Xcc",
+        "-I",
+        "-Xcc",
+        "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/checkouts/swift-cmark/src/include",
+        "-module-cache-path",
+        "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-color-diagnostics",
+        "-swift-version",
+        "6",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "comfymarkdownstore"
+      ],
+      "outputFileMapPath" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownCoreTests.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownCoreTests.build/ComfyMarkdownCoreTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/Modules/ComfyMarkdownCoreTests.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/Tests/ComfyMarkdownCoreTests/ComfyMarkdownCoreTests.swift"
+      ],
+      "tempsPath" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownCoreTests.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.ComfyMarkdownStorePackageTests-arm64-apple-macosx16.0-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownStorePackageTests.build/sources",
+      "importPath" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownStorePackageTests.derived/runner.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/Modules/ComfyMarkdownCoreTests.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownStorePackageTests.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "ComfyMarkdownStorePackageTests",
+      "moduleOutputPath" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/Modules/ComfyMarkdownStorePackageTests.swiftmodule",
+      "objects" : [
+        "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownStorePackageTests.build/runner.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx12.0",
+        "-enable-batch-mode",
+        "-index-store-path",
+        "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-Xfrontend",
+        "-enable-cross-import-overlays",
+        "-j11",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-Xcc",
+        "-fmodule-map-file=/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/checkouts/swift-cmark/extensions/include/module.modulemap",
+        "-Xcc",
+        "-I",
+        "-Xcc",
+        "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/checkouts/swift-cmark/extensions/include",
+        "-Xcc",
+        "-fmodule-map-file=/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/checkouts/swift-cmark/src/include/module.modulemap",
+        "-Xcc",
+        "-I",
+        "-Xcc",
+        "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/checkouts/swift-cmark/src/include",
+        "-module-cache-path",
+        "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownStorePackageTests.build/ComfyMarkdownStorePackageTests-Swift.h",
+        "-color-diagnostics",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "comfymarkdownstore"
+      ],
+      "outputFileMapPath" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownStorePackageTests.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownStorePackageTests.build/runner.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/Modules/ComfyMarkdownStorePackageTests.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownStorePackageTests.derived/runner.swift"
+      ],
+      "tempsPath" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownStorePackageTests.build",
+      "wholeModuleOptimization" : false
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "swiftTargetScanArgs" : {
+    "ComfyMarkdownCore" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "ComfyMarkdownCore",
+      "-package-name",
+      "comfymarkdownstore",
+      "-incremental",
+      "-c",
+      "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/Sources/ComfyMarkdownCore/ComfyMarkdownCore.swift",
+      "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/Sources/ComfyMarkdownCore/Models/MarkdownAST.swift",
+      "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/Sources/ComfyMarkdownCore/Models/MarkdownNode.swift",
+      "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/Sources/ComfyMarkdownCore/Models/MarkdownNodeType.swift",
+      "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/Sources/ComfyMarkdownCore/Utils/Parser.swift",
+      "-I",
+      "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx12.0",
+      "-enable-batch-mode",
+      "-index-store-path",
+      "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j11",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-Xcc",
+      "-fmodule-map-file=/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/checkouts/swift-cmark/src/include/module.modulemap",
+      "-Xcc",
+      "-I",
+      "-Xcc",
+      "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/checkouts/swift-cmark/src/include",
+      "-Xcc",
+      "-fmodule-map-file=/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/checkouts/swift-cmark/extensions/include/module.modulemap",
+      "-Xcc",
+      "-I",
+      "-Xcc",
+      "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/checkouts/swift-cmark/extensions/include",
+      "-module-cache-path",
+      "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownCore.build/ComfyMarkdownCore-Swift.h",
+      "-color-diagnostics",
+      "-swift-version",
+      "6",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "comfymarkdownstore",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "ComfyMarkdownCoreTests" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "ComfyMarkdownCoreTests",
+      "-package-name",
+      "comfymarkdownstore",
+      "-incremental",
+      "-c",
+      "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/Tests/ComfyMarkdownCoreTests/ComfyMarkdownCoreTests.swift",
+      "-I",
+      "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx14.0",
+      "-enable-batch-mode",
+      "-index-store-path",
+      "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-Xfrontend",
+      "-enable-cross-import-overlays",
+      "-j11",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-Xcc",
+      "-fmodule-map-file=/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/checkouts/swift-cmark/extensions/include/module.modulemap",
+      "-Xcc",
+      "-I",
+      "-Xcc",
+      "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/checkouts/swift-cmark/extensions/include",
+      "-Xcc",
+      "-fmodule-map-file=/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/checkouts/swift-cmark/src/include/module.modulemap",
+      "-Xcc",
+      "-I",
+      "-Xcc",
+      "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/checkouts/swift-cmark/src/include",
+      "-module-cache-path",
+      "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-color-diagnostics",
+      "-swift-version",
+      "6",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "comfymarkdownstore",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "ComfyMarkdownStorePackageTests" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "ComfyMarkdownStorePackageTests",
+      "-package-name",
+      "comfymarkdownstore",
+      "-incremental",
+      "-c",
+      "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownStorePackageTests.derived/runner.swift",
+      "-I",
+      "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx12.0",
+      "-enable-batch-mode",
+      "-index-store-path",
+      "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-Xfrontend",
+      "-enable-cross-import-overlays",
+      "-j11",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-Xcc",
+      "-fmodule-map-file=/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/checkouts/swift-cmark/extensions/include/module.modulemap",
+      "-Xcc",
+      "-I",
+      "-Xcc",
+      "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/checkouts/swift-cmark/extensions/include",
+      "-Xcc",
+      "-fmodule-map-file=/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/checkouts/swift-cmark/src/include/module.modulemap",
+      "-Xcc",
+      "-I",
+      "-Xcc",
+      "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/checkouts/swift-cmark/src/include",
+      "-module-cache-path",
+      "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownStorePackageTests.build/ComfyMarkdownStorePackageTests-Swift.h",
+      "-color-diagnostics",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "comfymarkdownstore",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ]
+  },
+  "targetDependencyMap" : {
+    "ComfyMarkdownCore" : [
+      "cmark_gfm_extensions",
+      "cmark_gfm"
+    ],
+    "ComfyMarkdownCoreTests" : [
+      "ComfyMarkdownCore",
+      "cmark_gfm_extensions",
+      "cmark_gfm"
+    ],
+    "ComfyMarkdownStorePackageTests" : [
+      "ComfyMarkdownCoreTests",
+      "ComfyMarkdownCore",
+      "cmark_gfm_extensions",
+      "cmark_gfm"
+    ],
+    "api_test" : [
+      "cmark_gfm_extensions",
+      "cmark_gfm"
+    ],
+    "cmark_gfm" : [
+
+    ],
+    "cmark_gfm_bin" : [
+      "cmark_gfm_extensions",
+      "cmark_gfm"
+    ],
+    "cmark_gfm_extensions" : [
+      "cmark_gfm"
+    ]
+  },
+  "testDiscoveryCommands" : {
+
+  },
+  "testEntryPointCommands" : {
+    "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownStorePackageTests.derived/runner.swift" : {
+      "inputs" : [
+
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownStorePackageTests.derived/runner.swift"
+        }
+      ]
+    }
+  },
+  "traitConfiguration" : {
+    "enableAllTraits" : false
+  },
+  "writeCommands" : {
+    "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownCore.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/Sources/ComfyMarkdownCore/ComfyMarkdownCore.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/Sources/ComfyMarkdownCore/Models/MarkdownAST.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/Sources/ComfyMarkdownCore/Models/MarkdownNode.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/Sources/ComfyMarkdownCore/Models/MarkdownNodeType.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/Sources/ComfyMarkdownCore/Utils/Parser.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownCore.build/sources"
+    },
+    "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownCoreTests.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/Tests/ComfyMarkdownCoreTests/ComfyMarkdownCoreTests.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownCoreTests.build/sources"
+    },
+    "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownStorePackageTests.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownStorePackageTests.derived/runner.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownStorePackageTests.build/sources"
+    },
+    "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownStorePackageTests.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownCore.build/ComfyMarkdownCore.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownCore.build/MarkdownAST.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownCore.build/MarkdownNode.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownCore.build/MarkdownNodeType.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownCore.build/Parser.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownCoreTests.build/ComfyMarkdownCoreTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownStorePackageTests.build/runner.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/arena.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/blocks.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/buffer.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/cmark.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/cmark_ctype.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/commonmark.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/footnotes.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/houdini_href_e.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/houdini_html_e.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/houdini_html_u.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/html.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/inlines.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/iterator.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/latex.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/linked_list.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/man.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/map.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/node.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/plaintext.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/plugin.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/references.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/registry.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/render.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/scanners.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/syntax_extension.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/utf8.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/xml.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm_extensions.build/autolink.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm_extensions.build/core-extensions.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm_extensions.build/ext_scanners.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm_extensions.build/strikethrough.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm_extensions.build/table.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm_extensions.build/tagfilter.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm_extensions.build/tasklist.c.o"
+        }
+      ],
+      "outputFilePath" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/ComfyMarkdownStorePackageTests.product/Objects.LinkFileList"
+    },
+    "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/api_test-entitlement.plist" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<entitlement-plist>"
+        },
+        {
+          "kind" : "virtual",
+          "name" : "<com.apple.security.get-task-allow>"
+        }
+      ],
+      "outputFilePath" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/api_test-entitlement.plist"
+    },
+    "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/api_test.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/api_test.build/cplusplus.cpp.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/api_test.build/harness.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/api_test.build/main.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/arena.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/blocks.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/buffer.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/cmark.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/cmark_ctype.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/commonmark.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/footnotes.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/houdini_href_e.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/houdini_html_e.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/houdini_html_u.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/html.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/inlines.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/iterator.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/latex.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/linked_list.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/man.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/map.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/node.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/plaintext.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/plugin.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/references.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/registry.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/render.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/scanners.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/syntax_extension.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/utf8.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/xml.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm_extensions.build/autolink.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm_extensions.build/core-extensions.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm_extensions.build/ext_scanners.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm_extensions.build/strikethrough.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm_extensions.build/table.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm_extensions.build/tagfilter.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm_extensions.build/tasklist.c.o"
+        }
+      ],
+      "outputFilePath" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/api_test.product/Objects.LinkFileList"
+    },
+    "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark-gfm-bin-entitlement.plist" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<entitlement-plist>"
+        },
+        {
+          "kind" : "virtual",
+          "name" : "<com.apple.security.get-task-allow>"
+        }
+      ],
+      "outputFilePath" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark-gfm-bin-entitlement.plist"
+    },
+    "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark-gfm-bin.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/arena.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/blocks.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/buffer.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/cmark.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/cmark_ctype.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/commonmark.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/footnotes.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/houdini_href_e.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/houdini_html_e.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/houdini_html_u.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/html.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/inlines.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/iterator.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/latex.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/linked_list.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/man.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/map.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/node.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/plaintext.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/plugin.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/references.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/registry.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/render.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/scanners.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/syntax_extension.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/utf8.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm.build/xml.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm_bin.build/main.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm_extensions.build/autolink.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm_extensions.build/core-extensions.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm_extensions.build/ext_scanners.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm_extensions.build/strikethrough.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm_extensions.build/table.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm_extensions.build/tagfilter.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark_gfm_extensions.build/tasklist.c.o"
+        }
+      ],
+      "outputFilePath" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/cmark-gfm-bin.product/Objects.LinkFileList"
+    },
+    "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt" : {
+      "alwaysOutOfDate" : true,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<swift-get-version>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+        }
+      ],
+      "outputFilePath" : "/Users/aryanrogye/Code/Projects/ComfyMarkdownStore/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+    }
+  }
+}
