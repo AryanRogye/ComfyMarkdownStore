@@ -34,16 +34,3 @@ jobs:
 
       - name: Test
         run: swift test --parallel
-
-      # Optional: code coverage (kept separate so CI still passes even if report fails)
-      - name: Coverage (optional)
-        if: always()
-        run: |
-          swift test --enable-code-coverage
-          PROFDATA=$(find .build -name 'default.profdata' | head -n 1)
-          BINARY=$(find .build -name 'ComfyMarkdownStorePackageTests' -type f | head -n 1)
-          if [[ -n "$PROFDATA" && -n "$BINARY" ]]; then
-            xcrun llvm-cov report "$BINARY" -instr-profile "$PROFDATA"
-          else
-            echo "Coverage artifacts not found (this is fine on first run)."
-          fi
