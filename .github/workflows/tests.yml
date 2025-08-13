@@ -1,0 +1,49 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: macos-15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Xcode
+        uses: maxim-lobanov/setup-xcode@v1
+        with:
+          # pick the Xcode you’re currently using locally
+          xcode-version: '16.4'
+
+      - name: Cache SwiftPM
+        uses: actions/cache@v4
+        with:
+          path: |
+            .build
+            ~/.swiftpm
+          key: ${{ runner.os }}-spm-${{ hashFiles('**/Package.resolved') }}
+          restore-keys: |
+            ${{ runner.os }}-spm-
+
+      - name: Build
+        run: swift build -v
+
+      - name: Test
+        run: swift test --parallel
+
+      # Optional: code coverage (kept separate so CI still passes even if report fails)
+      - name: Coverage (optional)
+        if: always()
+        run: |
+          swift test --enable-code-coverage
+          PROFDATA=$(find .build -name 'default.profdata' | head -n 1)
+          BINARY=$(find .build -name 'ComfyMarkdownStorePackageTests' -type f | head -n 1)
+          if [[ -n "$PROFDATA" && -n "$BINARY" ]]; then
+            xcrun llvm-cov report "$BINARY" -instr-profile "$PROFDATA"
+          else
+            echo "Coverage artifacts not found (this is fine on first run)."
+          fi

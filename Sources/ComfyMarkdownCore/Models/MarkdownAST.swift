@@ -45,9 +45,9 @@ import cmark_gfm_extensions
  */
 
 
-enum MarkdownASTError: Error {
+enum MarkdownASTError: Error, Equatable {
     case invalidNode
-    case unsupportedNodeType
+    case unsupportedNodeType(type: String? = nil)
 }
 
 struct MarkdownAST {
@@ -77,7 +77,7 @@ struct MarkdownAST {
         
         /// Get The Swift Type
         guard let swiftType = mapType(cmark_node_get_type(node), node) else {
-            throw MarkdownASTError.unsupportedNodeType
+            throw MarkdownASTError.unsupportedNodeType(type: String(cString: cmark_node_get_type_string(node)))
         }
         
         var children: [MarkdownNode] = []
@@ -101,6 +101,8 @@ extension MarkdownAST {
         _ node: UnsafeMutablePointer<cmark_node>
     ) -> MarkdownNodeType? {
         
+        /// for the tables
+        let typeString = String(cString: cmark_node_get_type_string(node))
         switch type {
             // ==== Implemented cases ====
         case CMARK_NODE_DOCUMENT:
@@ -124,7 +126,8 @@ extension MarkdownAST {
             
         case CMARK_NODE_LIST:
             let ordered = cmark_node_get_list_type(node) == CMARK_ORDERED_LIST
-            let start = Int(cmark_node_get_list_start(node))
+            let startRaw = Int(cmark_node_get_list_start(node))
+            let start = startRaw == 0 ? 1 : startRaw
             let tight = cmark_node_get_list_tight(node) != 0
             let delim: String?
             switch cmark_node_get_list_delim(node) {
@@ -139,7 +142,10 @@ extension MarkdownAST {
             
         case CMARK_NODE_CODE_BLOCK:
             let info = cmark_node_get_fence_info(node).flatMap { String(cString: $0) }
-            let literal = cmark_node_get_literal(node).flatMap { String(cString: $0) } ?? ""
+            var literal = cmark_node_get_literal(node).flatMap { String(cString: $0) } ?? ""
+            if literal.hasSuffix("\n") {
+                literal.removeLast()
+            }
             return .codeBlock(info: info?.isEmpty == true ? nil : info, literal: literal)
             
         case CMARK_NODE_HTML_BLOCK:
@@ -189,14 +195,35 @@ extension MarkdownAST {
             return .strong
             
         case CMARK_NODE_LINK:
-            let url = cmark_node_get_url(node).flatMap { String(cString: $0) } ?? ""
-            let title = cmark_node_get_title(node).flatMap { String(cString: $0) } ?? ""
-            return .link(url: url, title: title)
+            /// More Saftey so that no Nil returns
+            let urlCString = cmark_node_get_url(node)
+            let url = urlCString.flatMap {
+                let str = String(cString: $0)
+                return str.isEmpty ? nil : str
+            }
+            
+            let titleCString = cmark_node_get_title(node)
+            let title = titleCString.flatMap {
+                let str = String(cString: $0)
+                return str.isEmpty ? nil : str
+            }
+            
+            return .link(url: url ?? "", title: title)
             
         case CMARK_NODE_IMAGE:
-            let url = cmark_node_get_url(node).flatMap { String(cString: $0) } ?? ""
-            let title = cmark_node_get_title(node).flatMap { String(cString: $0) } ?? ""
-            return .image(url: url, title: title)
+            let urlCString = cmark_node_get_url(node)
+            let url = urlCString.flatMap {
+                let str = String(cString: $0)
+                return str.isEmpty ? nil : str
+            }
+            
+            let titleCString = cmark_node_get_title(node)
+            let title = titleCString.flatMap {
+                let str = String(cString: $0)
+                return str.isEmpty ? nil : str
+            }
+            
+            return .image(url: url ?? "", title: title)
             
         case CMARK_NODE_FOOTNOTE_REFERENCE:
             return .footnoteReference
@@ -206,9 +233,24 @@ extension MarkdownAST {
             
         case CMARK_NODE_NONE:
             return MarkdownNodeType.none
-            
+        default:
+            break
+        }
+        
+        switch typeString {
+        case "table":
+            return .table
+        case "table_header":
+            return .table_header
+        case "table_row":
+            // TODO: When swift-cmark exposes cmark_node_get_table_row_is_header, use it
+            return .tableRow(header: false)
+        case "table_cell":
+            // TODO: When swift-cmark exposes cmark_node_get_table_cell_alignment, use it
+            return .tableCell(align: nil)
         default:
             return nil
         }
+
     }
 }
