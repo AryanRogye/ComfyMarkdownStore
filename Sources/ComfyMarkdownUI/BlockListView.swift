@@ -33,11 +33,13 @@ public struct RenderNodeView: View {
     @ViewBuilder
     public var body: some View {
         switch node.type {
-        case .heading(let level):                   HeadingView(level: level, node: node)
-        case .paragraph:                            ParagraphView(node: node)
-        case .thematicBreak:                        ThematicBreakView()
-        case .blockQuote:                           BlockquoteView(node: node)
-        case .codeBlock(let info, let literal):     CodeBlockView(literal: literal, info: info)
+        case .heading(let level):                                   HeadingView(level: level, node: node)
+        case .paragraph:                                            ParagraphView(node: node)
+        case .thematicBreak:                                        ThematicBreakView()
+        case .blockQuote:                                           BlockquoteView(node: node)
+        case .codeBlock(let info, let literal):                     CodeBlockView(literal: literal, info: info)
+        case .list(let ordered,let start,let tight,let delimiter):  ListView(delimiter: delimiter, ordered: ordered, start: start, tight: tight, node: node)
+        case .listItem:                                             ListItemView(node: node)
         default:                        EmptyView()
                         
             //

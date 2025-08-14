@@ -45,6 +45,14 @@ struct ContentView: View {
                 let test = Test()
             ```
             
+            ---
+            
+            - Item 1
+              - Item 2
+                - item 3
+              - item 2
+            - item 3
+            
             """, maxFontSize: $fontsize)
             
             /// Small Counter To Increase Font Size
