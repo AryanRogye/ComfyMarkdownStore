@@ -89,10 +89,18 @@ public struct MarkdownAST {
         var oldChildIndex = 0
         
         while let c = child {
-            let oldChild = lastMarkdownNode?.children[oldChildIndex]
+            let oldChild: MarkdownNode? = {
+                guard let last = lastMarkdownNode,
+                      oldChildIndex < last.children.count else {
+                    return nil
+                }
+                return last.children[oldChildIndex]
+            }()
+            
             if let swiftChild = try convertNode(oldChild, c) {
                 children.append(swiftChild)
             }
+            
             child = cmark_node_next(c)
             oldChildIndex += 1
         }

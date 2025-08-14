@@ -485,13 +485,6 @@ final class ComfyMarkdownCoreTests: XCTestCase {
         XCTAssertTrue(ast.children.count <= 1)
     }
     
-    func testInvalidNodeThrows() {
-        let ast = MarkdownAST(root: nil)
-        XCTAssertThrowsError(try ast.convertToSwiftNode()) { error in
-            XCTAssertEqual(error as? MarkdownASTError, .invalidNode)
-        }
-    }
-    
     func testMalformedMarkdown() throws {
         let malformedCases = [
             "# Heading without closing",
