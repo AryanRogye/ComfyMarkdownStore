@@ -143,6 +143,7 @@ extension ContentView {
             
         """
         
+        
         @MainActor
         public func onClose() {
             if isFocused {

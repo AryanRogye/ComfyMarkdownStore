@@ -48,12 +48,5 @@ let package = Package(
             ]
         ),
         /// No Tests for ComfyMarkdownUI yet
-        
-        /// Executable
-            .executableTarget(
-                name: "ComfyMarkdownExample",
-                dependencies: ["ComfyMarkdownUI"],
-                path: "Examples/ComfyMarkdownExample/ComfyMarkdownExample"
-            )
     ]
 )

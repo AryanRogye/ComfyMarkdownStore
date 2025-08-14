@@ -20,7 +20,7 @@ public struct ParagraphView: View {
     
     public var body: some View {
         VStack {
-            Text("Paragraph")
+            Text(node.plainText)
                 .font(
                     theme.bodyFont(
                         maxHeadingSize: maxHeadingSize
