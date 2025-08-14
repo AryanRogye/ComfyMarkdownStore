@@ -26,14 +26,18 @@ import Foundation
 
 
 public class ComfyMarkdownCore {
-    let parser : Parser
+    
+    lazy var parser  : Parser  = Parser()
     
     public init() {
-        parser = Parser()
     }
     
     public func parse(markdown: String) throws -> MarkdownNode? {
         try parser.parse(markdown)
+    }
+    
+    public func getAttributeString(node: MarkdownNode) -> AttributedString {
+        Builder.build(from: node)
     }
 }
 

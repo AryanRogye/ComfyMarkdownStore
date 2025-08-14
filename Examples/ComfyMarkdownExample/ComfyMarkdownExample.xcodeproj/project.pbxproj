@@ -7,47 +7,47 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9B686F982E4D6CA700199AD4 /* ComfyMarkdownCore in Frameworks */ = {isa = PBXBuildFile; productRef = 9B686F972E4D6CA700199AD4 /* ComfyMarkdownCore */; };
-		9B686F9A2E4D6CA700199AD4 /* ComfyMarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = 9B686F992E4D6CA700199AD4 /* ComfyMarkdownUI */; };
+		9B686FE62E4D941E00199AD4 /* ComfyMarkdownCore in Frameworks */ = {isa = PBXBuildFile; productRef = 9B686FE52E4D941E00199AD4 /* ComfyMarkdownCore */; };
+		9B686FE82E4D941E00199AD4 /* ComfyMarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = 9B686FE72E4D941E00199AD4 /* ComfyMarkdownUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9B686F872E4D6C9600199AD4 /* ComfyMarkdown_macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComfyMarkdown_macOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B686FD52E4D93E500199AD4 /* ComfyMarkdownExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComfyMarkdownExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		9B686F892E4D6C9600199AD4 /* ComfyMarkdown_macOS */ = {
+		9B686FD72E4D93E500199AD4 /* ComfyMarkdownExample */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ComfyMarkdown_macOS;
+			path = ComfyMarkdownExample;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		9B686F842E4D6C9600199AD4 /* Frameworks */ = {
+		9B686FD22E4D93E500199AD4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B686F9A2E4D6CA700199AD4 /* ComfyMarkdownUI in Frameworks */,
-				9B686F982E4D6CA700199AD4 /* ComfyMarkdownCore in Frameworks */,
+				9B686FE82E4D941E00199AD4 /* ComfyMarkdownUI in Frameworks */,
+				9B686FE62E4D941E00199AD4 /* ComfyMarkdownCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9B686F7E2E4D6C9600199AD4 = {
+		9B686FCC2E4D93E500199AD4 = {
 			isa = PBXGroup;
 			children = (
-				9B686F892E4D6C9600199AD4 /* ComfyMarkdown_macOS */,
-				9B686F882E4D6C9600199AD4 /* Products */,
+				9B686FD72E4D93E500199AD4 /* ComfyMarkdownExample */,
+				9B686FD62E4D93E500199AD4 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		9B686F882E4D6C9600199AD4 /* Products */ = {
+		9B686FD62E4D93E500199AD4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9B686F872E4D6C9600199AD4 /* ComfyMarkdown_macOS.app */,
+				9B686FD52E4D93E500199AD4 /* ComfyMarkdownExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -55,69 +55,69 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9B686F862E4D6C9600199AD4 /* ComfyMarkdown_macOS */ = {
+		9B686FD42E4D93E500199AD4 /* ComfyMarkdownExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9B686F932E4D6C9700199AD4 /* Build configuration list for PBXNativeTarget "ComfyMarkdown_macOS" */;
+			buildConfigurationList = 9B686FE12E4D93E700199AD4 /* Build configuration list for PBXNativeTarget "ComfyMarkdownExample" */;
 			buildPhases = (
-				9B686F832E4D6C9600199AD4 /* Sources */,
-				9B686F842E4D6C9600199AD4 /* Frameworks */,
-				9B686F852E4D6C9600199AD4 /* Resources */,
+				9B686FD12E4D93E500199AD4 /* Sources */,
+				9B686FD22E4D93E500199AD4 /* Frameworks */,
+				9B686FD32E4D93E500199AD4 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				9B686F892E4D6C9600199AD4 /* ComfyMarkdown_macOS */,
+				9B686FD72E4D93E500199AD4 /* ComfyMarkdownExample */,
 			);
-			name = ComfyMarkdown_macOS;
+			name = ComfyMarkdownExample;
 			packageProductDependencies = (
-				9B686F972E4D6CA700199AD4 /* ComfyMarkdownCore */,
-				9B686F992E4D6CA700199AD4 /* ComfyMarkdownUI */,
+				9B686FE52E4D941E00199AD4 /* ComfyMarkdownCore */,
+				9B686FE72E4D941E00199AD4 /* ComfyMarkdownUI */,
 			);
-			productName = ComfyMarkdown_macOS;
-			productReference = 9B686F872E4D6C9600199AD4 /* ComfyMarkdown_macOS.app */;
+			productName = ComfyMarkdownExample;
+			productReference = 9B686FD52E4D93E500199AD4 /* ComfyMarkdownExample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		9B686F7F2E4D6C9600199AD4 /* Project object */ = {
+		9B686FCD2E4D93E500199AD4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1640;
 				LastUpgradeCheck = 1640;
 				TargetAttributes = {
-					9B686F862E4D6C9600199AD4 = {
+					9B686FD42E4D93E500199AD4 = {
 						CreatedOnToolsVersion = 16.4;
 					};
 				};
 			};
-			buildConfigurationList = 9B686F822E4D6C9600199AD4 /* Build configuration list for PBXProject "ComfyMarkdown_macOS" */;
+			buildConfigurationList = 9B686FD02E4D93E500199AD4 /* Build configuration list for PBXProject "ComfyMarkdownExample" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 9B686F7E2E4D6C9600199AD4;
+			mainGroup = 9B686FCC2E4D93E500199AD4;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				9B686F962E4D6CA700199AD4 /* XCLocalSwiftPackageReference "../../../ComfyMarkdownStore" */,
+				9B686FE42E4D941E00199AD4 /* XCLocalSwiftPackageReference "../../../ComfyMarkdownStore" */,
 			);
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 9B686F882E4D6C9600199AD4 /* Products */;
+			productRefGroup = 9B686FD62E4D93E500199AD4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9B686F862E4D6C9600199AD4 /* ComfyMarkdown_macOS */,
+				9B686FD42E4D93E500199AD4 /* ComfyMarkdownExample */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		9B686F852E4D6C9600199AD4 /* Resources */ = {
+		9B686FD32E4D93E500199AD4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -127,7 +127,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		9B686F832E4D6C9600199AD4 /* Sources */ = {
+		9B686FD12E4D93E500199AD4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -137,7 +137,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		9B686F912E4D6C9700199AD4 /* Debug */ = {
+		9B686FDF2E4D93E700199AD4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -191,17 +191,15 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 15.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		9B686F922E4D6C9700199AD4 /* Release */ = {
+		9B686FE02E4D93E700199AD4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -249,85 +247,107 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 15.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
 			};
 			name = Release;
 		};
-		9B686F942E4D6C9700199AD4 /* Debug */ = {
+		9B686FE22E4D93E700199AD4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = ComfyMarkdown_macOS/ComfyMarkdown_macOS.entitlements;
+				CODE_SIGN_ENTITLEMENTS = ComfyMarkdownExample/ComfyMarkdownExample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B9P888266K;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.aryanrogye.ComfyMarkdown-macOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aryanrogye.ComfyMarkdownExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 2.5;
 			};
 			name = Debug;
 		};
-		9B686F952E4D6C9700199AD4 /* Release */ = {
+		9B686FE32E4D93E700199AD4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = ComfyMarkdown_macOS/ComfyMarkdown_macOS.entitlements;
+				CODE_SIGN_ENTITLEMENTS = ComfyMarkdownExample/ComfyMarkdownExample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B9P888266K;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.aryanrogye.ComfyMarkdown-macOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aryanrogye.ComfyMarkdownExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 2.5;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9B686F822E4D6C9600199AD4 /* Build configuration list for PBXProject "ComfyMarkdown_macOS" */ = {
+		9B686FD02E4D93E500199AD4 /* Build configuration list for PBXProject "ComfyMarkdownExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9B686F912E4D6C9700199AD4 /* Debug */,
-				9B686F922E4D6C9700199AD4 /* Release */,
+				9B686FDF2E4D93E700199AD4 /* Debug */,
+				9B686FE02E4D93E700199AD4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9B686F932E4D6C9700199AD4 /* Build configuration list for PBXNativeTarget "ComfyMarkdown_macOS" */ = {
+		9B686FE12E4D93E700199AD4 /* Build configuration list for PBXNativeTarget "ComfyMarkdownExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9B686F942E4D6C9700199AD4 /* Debug */,
-				9B686F952E4D6C9700199AD4 /* Release */,
+				9B686FE22E4D93E700199AD4 /* Debug */,
+				9B686FE32E4D93E700199AD4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -335,22 +355,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		9B686F962E4D6CA700199AD4 /* XCLocalSwiftPackageReference "../../../ComfyMarkdownStore" */ = {
+		9B686FE42E4D941E00199AD4 /* XCLocalSwiftPackageReference "../../../ComfyMarkdownStore" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../../../ComfyMarkdownStore;
 		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		9B686F972E4D6CA700199AD4 /* ComfyMarkdownCore */ = {
+		9B686FE52E4D941E00199AD4 /* ComfyMarkdownCore */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = ComfyMarkdownCore;
 		};
-		9B686F992E4D6CA700199AD4 /* ComfyMarkdownUI */ = {
+		9B686FE72E4D941E00199AD4 /* ComfyMarkdownUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = ComfyMarkdownUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = 9B686F7F2E4D6C9600199AD4 /* Project object */;
+	rootObject = 9B686FCD2E4D93E500199AD4 /* Project object */;
 }

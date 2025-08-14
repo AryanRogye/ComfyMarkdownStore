@@ -11,17 +11,27 @@ import SwiftUI
 import ComfyMarkdownCore
 
 public struct HeadingView: View {
+    
     var level: Int
     var node : MarkdownNode
     
+    @Environment(\.markdownTheme) private var theme
+    @Environment(\.maxFontSize) private var maxHeadingSize
+    
+    @State private var text: String?
+    
     public init(level: Int, node: MarkdownNode) {
         self.level = level
-        self.node = node
+        self.node  = node
     }
     
     public var body: some View {
-        VStack {
-            Text("Heading")
-        }
+        Text(node.plainText)
+            .font(
+                theme.headingFont(
+                    for: level,
+                    maxHeadingSize: maxHeadingSize
+                )
+            )
     }
 }

@@ -16,10 +16,13 @@ public struct RenderBlockListView: View {
     }
     
     public var body: some View {
-        VStack(alignment: .leading, spacing: 10) {
-            ForEach(Array(nodes.enumerated()), id: \.offset) { _, node in
-                RenderNodeView(node: node)
+        ScrollView(.vertical, showsIndicators: true) {
+            LazyVStack(alignment: .leading, spacing: 10) {
+                ForEach(nodes) { node in
+                    RenderNodeView(node: node)
+                }
             }
+            .padding(.horizontal)
         }
     }
 }
@@ -33,7 +36,6 @@ public struct RenderNodeView: View {
         case .heading(let level):   HeadingView(level: level, node: node)
         case .paragraph:            ParagraphView(node: node)
         default:                    EmptyView()
-
             //        case .blockquote, .blockQuote:
             //            BlockquoteView(node: node)
             //
