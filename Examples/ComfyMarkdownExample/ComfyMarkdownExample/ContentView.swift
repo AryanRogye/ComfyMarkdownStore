@@ -20,6 +20,12 @@ struct ContentView: View {
             #### Test
             ##### Test
             ###### Test
+            
+            This is a paragraph.  
+            It can span multiple lines in the source file,  
+            and Markdown will wrap it together when rendered.
+            
+            This is a second paragraph, because it’s separated by a blank line.
             """, maxFontSize: $fontsize)
             
             /// Small Counter To Increase Font Size
