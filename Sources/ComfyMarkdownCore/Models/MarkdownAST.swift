@@ -52,26 +52,23 @@ public enum MarkdownASTError: Error, Equatable {
 
 public struct MarkdownAST {
     /// cmake_node is a tree structure representing the Markdown document.
-    var root: UnsafeMutablePointer<cmark_node>? = nil
-    
-    init(root: UnsafeMutablePointer<cmark_node>?) {
-        self.root = root
-        
-        /// We will need to walk/transform the AST in Swift
-    }
     
     // MARK: - Public API To Convert To Swift Node
-    public func convertToSwiftNode() throws -> MarkdownNode? {
-        guard let root = root else {
-            throw MarkdownASTError.invalidNode
-        }
-        return try convertNode(root)
+    public static func convertToSwiftNode(
+        lastMarkdownNode: MarkdownNode?,
+        root: UnsafeMutablePointer<cmark_node>
+    ) throws -> MarkdownNode? {
+        return try convertNode(
+            lastMarkdownNode,
+            root
+        )
     }
     
     // MARK: - Private Helper Methods
     
     /// function to convert a cmark_node to a MarkdownNode
-    private func convertNode(
+    private static func convertNode(
+        _ lastMarkdownNode: MarkdownNode?,
         _ node: UnsafeMutablePointer<cmark_node>
     ) throws -> MarkdownNode? {
         
@@ -80,23 +77,38 @@ public struct MarkdownAST {
             throw MarkdownASTError.unsupportedNodeType(type: String(cString: cmark_node_get_type_string(node)))
         }
         
-        var children: [MarkdownNode] = []
+        // Compare with old node before building children
+        if let old = lastMarkdownNode,
+           old.type == swiftType,
+           old.plainText == literalFromCMark(node) {
+            return old
+        }
         
+        var children: [MarkdownNode] = []
         var child = cmark_node_first_child(node)
+        var oldChildIndex = 0
+        
         while let c = child {
-            if let swiftChild = try convertNode(c) {
+            let oldChild = lastMarkdownNode?.children[oldChildIndex]
+            if let swiftChild = try convertNode(oldChild, c) {
                 children.append(swiftChild)
             }
             child = cmark_node_next(c)
+            oldChildIndex += 1
         }
         
         return MarkdownNode(type: swiftType, children: children)
+    }
+    
+    private static func literalFromCMark(_ node: UnsafeMutablePointer<cmark_node>) -> String {
+        guard let lit = cmark_node_get_literal(node) else { return "" }
+        return String(cString: lit)
     }
 }
 
 // MARK: - Mapping Logic
 extension MarkdownAST {
-    private func mapType(
+    private static func mapType(
         _ type: cmark_node_type,
         _ node: UnsafeMutablePointer<cmark_node>
     ) -> MarkdownNodeType? {
@@ -251,6 +263,6 @@ extension MarkdownAST {
         default:
             return nil
         }
-
+        
     }
 }

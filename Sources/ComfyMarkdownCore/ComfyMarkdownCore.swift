@@ -35,9 +35,5 @@ public class ComfyMarkdownCore {
     public func parse(markdown: String) throws -> MarkdownNode? {
         try parser.parse(markdown)
     }
-    
-    public func getAttributeString(node: MarkdownNode) -> AttributedString {
-        Builder.build(from: node)
-    }
 }
 

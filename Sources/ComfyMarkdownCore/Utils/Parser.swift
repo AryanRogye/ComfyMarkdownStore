@@ -11,6 +11,8 @@ import cmark_gfm_extensions
 public class Parser {
     let parser : UnsafeMutablePointer<cmark_parser>
     
+    private var lastMarkdownNode: MarkdownNode?
+    
     public init() {
         /// Create a parser with default options
         parser = cmark_parser_new_with_mem(CMARK_OPT_DEFAULT, cmark_get_default_mem_allocator())        /// Configure the parser extensions
@@ -33,11 +35,21 @@ public class Parser {
         }
     }
     
-    // Since idk much about this gonna leave this empty return for now
     public func parse(_ markdown: String) throws -> MarkdownNode? {
         cmark_parser_feed(parser, markdown, markdown.utf8.count)
         let root = cmark_parser_finish(parser)
-        let ast = MarkdownAST(root: root)
-        return try ast.convertToSwiftNode()
+        
+        guard let root = root else {
+            print("Root Was Nil")
+            return nil
+        }
+        
+        let ast = try MarkdownAST.convertToSwiftNode(
+            lastMarkdownNode: lastMarkdownNode,
+            root: root
+        )
+        
+        lastMarkdownNode = ast
+        return ast
     }
 }
