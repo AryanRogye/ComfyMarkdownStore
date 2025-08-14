@@ -33,10 +33,11 @@ public struct RenderNodeView: View {
     @ViewBuilder
     public var body: some View {
         switch node.type {
-        case .heading(let level):       HeadingView(level: level, node: node)
-        case .paragraph:                ParagraphView(node: node)
-        case .thematicBreak:            ThematicBreakView()
-        case .blockQuote:               BlockquoteView(node: node)
+        case .heading(let level):                   HeadingView(level: level, node: node)
+        case .paragraph:                            ParagraphView(node: node)
+        case .thematicBreak:                        ThematicBreakView()
+        case .blockQuote:                           BlockquoteView(node: node)
+        case .codeBlock(let info, let literal):     CodeBlockView(literal: literal, info: info)
         default:                        EmptyView()
                         
             //
@@ -44,8 +45,6 @@ public struct RenderNodeView: View {
             //        case .list(let ordered, let start, let tight, _),
             ////            ListBlockView(node: node, ordered: ordered, start: start, tight: tight)
             //
-            //        .codeBlock(_, let code),
-            ////            CodeBlockView(code: code)
             //
             //            // Inline nodes will be handled inside Paragraph/Heading
             //        .text, .emphasis, .strong, .link, .image, .code,

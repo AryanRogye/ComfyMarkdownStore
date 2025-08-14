@@ -46,7 +46,14 @@ let package = Package(
                 // if I have resources, I can add them here
                 // .process("Resources")
             ]
-        )
+        ),
         /// No Tests for ComfyMarkdownUI yet
+        
+        /// Executable
+            .executableTarget(
+                name: "ComfyMarkdownExample",
+                dependencies: ["ComfyMarkdownUI"],
+                path: "Examples/ComfyMarkdownExample/ComfyMarkdownExample"
+            )
     ]
 )

@@ -17,6 +17,7 @@ public struct MarkdownTheme {
     
     public var dividerColor: Color = .secondary
     public var blockquoteBackgroundColor: Color = .secondary.opacity(0.5)
+    public var codeBlockBackgroundColor: Color = .secondary.opacity(0.6)
     
     public func headingFont(for level: Int, maxHeadingSize: CGFloat) -> Font {
         let idx = max(1, min(6, level)) - 1
@@ -24,12 +25,14 @@ public struct MarkdownTheme {
         let weight: Font.Weight = (level == 1) ? .bold : .semibold
         return .system(size: size, weight: weight)
     }
-    
     public func bodyFont(maxHeadingSize: CGFloat) -> Font {
         .system(size: maxHeadingSize * bodyRatio)
     }
     public func blockquoteFont(maxHeadingSize: CGFloat) -> Font {
         .system(size: maxHeadingSize * blockQuoteRatio)
+    }
+    public func codeBlockFont(maxHeadingSize: CGFloat) -> Font {
+        bodyFont(maxHeadingSize: maxHeadingSize)
     }
 }
 

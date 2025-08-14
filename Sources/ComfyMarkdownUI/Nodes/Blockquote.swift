@@ -22,6 +22,7 @@ public struct BlockquoteView: View {
     
     public var body: some View {
         Text(node.plainText)
+            .italic()
             .frame(maxWidth: .infinity, alignment: .leading)
             .font(
                 theme.blockquoteFont(maxHeadingSize: maxHeadingSize)

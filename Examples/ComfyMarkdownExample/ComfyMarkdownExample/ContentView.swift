@@ -39,6 +39,12 @@ struct ContentView: View {
             > Testing With Detached
             > Lines in between
             
+            ---
+            
+            ```swift
+                let test = Test()
+            ```
+            
             """, maxFontSize: $fontsize)
             
             /// Small Counter To Increase Font Size
