@@ -11,8 +11,12 @@ import SwiftUI
 public struct MarkdownTheme {
     
     public var headingRatios: [CGFloat] = [1.00, 0.85, 0.75, 0.65, 0.55, 0.50]
+    
     public var bodyRatio: CGFloat = 0.6
+    public var blockQuoteRatio: CGFloat = 0.55
+    
     public var dividerColor: Color = .secondary
+    public var blockquoteBackgroundColor: Color = .secondary.opacity(0.5)
     
     public func headingFont(for level: Int, maxHeadingSize: CGFloat) -> Font {
         let idx = max(1, min(6, level)) - 1
@@ -23,6 +27,9 @@ public struct MarkdownTheme {
     
     public func bodyFont(maxHeadingSize: CGFloat) -> Font {
         .system(size: maxHeadingSize * bodyRatio)
+    }
+    public func blockquoteFont(maxHeadingSize: CGFloat) -> Font {
+        .system(size: maxHeadingSize * blockQuoteRatio)
     }
 }
 

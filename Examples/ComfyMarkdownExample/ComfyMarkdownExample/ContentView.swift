@@ -30,6 +30,15 @@ struct ContentView: View {
             ***
             
             This is a second paragraph, because it’s separated by a blank line.
+            
+            ---
+            
+            > This is a BlockQuoteView
+            > With Another one
+            
+            > Testing With Detached
+            > Lines in between
+            
             """, maxFontSize: $fontsize)
             
             /// Small Counter To Increase Font Size
