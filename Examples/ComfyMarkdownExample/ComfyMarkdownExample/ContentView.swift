@@ -14,11 +14,14 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            if viewModel.isEditing {
-                editingView
-            } else {
-                markdownView
+            Group {
+                if viewModel.isEditing {
+                    editingView
+                } else {
+                    markdownView
+                }
             }
+            .padding(.top)
         }
         .toolbar {
             ToolbarItem(placement: .primaryAction) {
@@ -26,6 +29,14 @@ struct ContentView: View {
             }
             ToolbarItem(placement: .automatic) {
                 fontSizePreview
+            }
+            ToolbarItem(placement: .navigation) {
+                modalButton
+            }
+        }
+        .sheet(isPresented: $viewModel.isSettingsOpen) {
+            NavigationStack {
+                SettingsView(viewModel: viewModel)
             }
         }
     }
@@ -50,6 +61,11 @@ struct ContentView: View {
             .minimumScaleFactor(0.5)
             .lineLimit(1)
             .fixedSize()
+    }
+    private var modalButton : some View {
+        Button(action: viewModel.toggleSettings) {
+            Image(systemName: "gear")
+        }
     }
     
     // MARK: - Editing View
@@ -80,6 +96,7 @@ extension ContentView {
         @Published var isEditing = false
         @Published var isFocused : Bool = false
         @Published var fontSize : CGFloat = 18.0
+        @Published var isSettingsOpen : Bool = false
         @Published var text : String = """
         # Test
         ## TEST
@@ -139,6 +156,14 @@ extension ContentView {
         public func toggleEditing() {
             withAnimation(AppAnim.modeSwitch) {
                 isEditing.toggle()
+            }
+        }
+        
+        @MainActor
+        public func toggleSettings() {
+            // Placeholder for settings action
+            withAnimation(AppAnim.modeSwitch) {
+                isSettingsOpen.toggle()
             }
         }
     }
