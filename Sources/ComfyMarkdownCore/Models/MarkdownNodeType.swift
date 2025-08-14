@@ -5,7 +5,7 @@
 //  Created by Aryan Rogye on 8/13/25.
 //
 
-enum MarkdownNodeType: Equatable {
+public enum MarkdownNodeType: Equatable {
     // ===== Block-level =====
     case document
     case blockQuote
@@ -43,7 +43,7 @@ enum MarkdownNodeType: Equatable {
 }
 
 extension MarkdownNodeType: CustomStringConvertible {
-    var description: String {
+    public var description: String {
         switch self {
         case .document:                                         return "(document)"
         case .heading(let level):                               return "(heading level=\(level))"

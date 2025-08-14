@@ -8,10 +8,10 @@
 import cmark_gfm
 import cmark_gfm_extensions
 
-class Parser {
+public class Parser {
     let parser : UnsafeMutablePointer<cmark_parser>
     
-    init() {
+    public init() {
         /// Create a parser with default options
         parser = cmark_parser_new_with_mem(CMARK_OPT_DEFAULT, cmark_get_default_mem_allocator())        /// Configure the parser extensions
         self.configureExtensions()

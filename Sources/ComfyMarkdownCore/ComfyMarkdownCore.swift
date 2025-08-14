@@ -25,10 +25,10 @@ import Foundation
 //└── traverse AST (via cmark_iter_* APIs)
 
 
-class ComfyMarkdownCore {
+public class ComfyMarkdownCore {
     let parser : Parser
     
-    init() {
+    public init() {
         parser = Parser()
     }
     

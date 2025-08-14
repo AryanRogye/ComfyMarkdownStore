@@ -14,15 +14,19 @@ let package = Package(
         .library(
             name: "ComfyMarkdownCore",
             targets: ["ComfyMarkdownCore"]
-        )
+        ),
         /// More Products go here
+        .library(
+            name: "ComfyMarkdownUI",
+            targets: ["ComfyMarkdownUI"]
+        )
     ],
     dependencies: [
         .package(url: "https://github.com/swiftlang/swift-cmark", branch: "gfm")
     ],
-    /// Targets
+    // MARK: - Targets
     targets: [
-        /// Core Targets
+        // MARK: - Core
         .target(
             name: "ComfyMarkdownCore",
             dependencies: [
@@ -33,7 +37,16 @@ let package = Package(
         .testTarget(
             name: "ComfyMarkdownCoreTests",
             dependencies: ["ComfyMarkdownCore"]
+        ),
+        /// MARK: - UI
+        .target(
+            name: "ComfyMarkdownUI",
+            dependencies: ["ComfyMarkdownCore"],
+            resources: [
+                // if I have resources, I can add them here
+                // .process("Resources")
+            ]
         )
-        /// More Targets go here
+        /// No Tests for ComfyMarkdownUI yet
     ]
 )

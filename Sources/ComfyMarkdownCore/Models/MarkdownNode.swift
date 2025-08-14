@@ -7,10 +7,11 @@
 
 
 /// Tree structure representing a Markdown document.
-struct MarkdownNode {
-    var type: MarkdownNodeType
-    var children: [MarkdownNode] = []
+public struct MarkdownNode {
+    public var type: MarkdownNodeType
+    public var children: [MarkdownNode] = []
     
+    /// Function To Nicely Visualize Markdown
     public func visualizeAST(indentation: String = "") {
         // Print current node type
         print("\(indentation)- \(type.description)")

@@ -45,12 +45,12 @@ import cmark_gfm_extensions
  */
 
 
-enum MarkdownASTError: Error, Equatable {
+public enum MarkdownASTError: Error, Equatable {
     case invalidNode
     case unsupportedNodeType(type: String? = nil)
 }
 
-struct MarkdownAST {
+public struct MarkdownAST {
     /// cmake_node is a tree structure representing the Markdown document.
     var root: UnsafeMutablePointer<cmark_node>? = nil
     
