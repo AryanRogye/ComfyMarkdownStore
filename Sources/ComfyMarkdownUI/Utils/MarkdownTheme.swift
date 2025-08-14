@@ -12,6 +12,7 @@ public struct MarkdownTheme {
     
     public var headingRatios: [CGFloat] = [1.00, 0.85, 0.75, 0.65, 0.55, 0.50]
     public var bodyRatio: CGFloat = 0.6
+    public var dividerColor: Color = .secondary
     
     public func headingFont(for level: Int, maxHeadingSize: CGFloat) -> Font {
         let idx = max(1, min(6, level)) - 1

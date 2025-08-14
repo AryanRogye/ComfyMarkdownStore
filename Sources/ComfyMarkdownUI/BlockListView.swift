@@ -35,12 +35,11 @@ public struct RenderNodeView: View {
         switch node.type {
         case .heading(let level):   HeadingView(level: level, node: node)
         case .paragraph:            ParagraphView(node: node)
+        case .thematicBreak:        ThematicBreakView()
         default:                    EmptyView()
             //        case .blockquote, .blockQuote:
             //            BlockquoteView(node: node)
             //
-            //        case .thematicBreak:
-            //            Divider().padding(.vertical, 8)
             //
             //        case .list(let ordered, let start, let tight, _),
             ////            ListBlockView(node: node, ordered: ordered, start: start, tight: tight)
