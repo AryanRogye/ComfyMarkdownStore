@@ -1,6 +1,17 @@
 # ComfyMarkdownStore
 
-**ComfyMarkdownStore** is a Swift package that takes your Markdown — including GitHub Flavored Markdown (GFM) — and turns it into a clean, Swift-friendly Abstract Syntax Tree (AST).  
+**ComfyMarkdownStore** is a Swift package that takes your Markdown — including GitHub Flavored Markdown (GFM) — and turns it into a clean, Swift-friendly Abstract Syntax Tree (AST).
+
+---
+
+## Example Screenshots
+
+<img src="https://github.com/user-attachments/assets/25440245-729b-4f14-aecb-24636284e4ce" height="300"/>
+<img src="https://github.com/user-attachments/assets/e7d17fd5-334b-43e4-915e-74bbc39a8700" height="300"/>
+<img src="https://github.com/user-attachments/assets/958d5827-1701-408b-b967-696bfaf6f4f1" height="300"/>
+<img src="https://github.com/user-attachments/assets/dc421166-ec77-46c5-908a-b143d81aa470" height="300"/>
+<img src="https://github.com/user-attachments/assets/4d2936f0-2b2f-4145-a2ef-1ae8191c2790" height="300"/>
+<img src="https://github.com/user-attachments/assets/67a0c85a-b210-453e-8f10-7c877f97d2dc" height="300"/>
 
 ---
 
