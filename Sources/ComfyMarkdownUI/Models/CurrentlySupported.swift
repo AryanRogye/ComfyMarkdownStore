@@ -7,30 +7,25 @@
 
 
 public enum CurrentlySupported: String, CaseIterable, Hashable {
-    case heading = "Headings"
-    case paragraph = "Paragraphs"
-    case thematicBreak = "Thematic Breaks"
-    case blockQuote = "Block Quotes"
-    case codeBlock = "Code Blocks"
-    case list = "Lists"
-    case listItem = "List Items"
+    case heading        = "Headings"
+    case paragraph      = "Paragraphs"
+    case thematicBreak  = "Thematic Breaks"
+    case blockQuote     = "Block Quotes"
+    case codeBlock      = "Code Blocks"
+    case list           = "Lists"
+    case listItem       = "List Items"
+    case emphasis       = "Emphasis"
     
     public var icon: String {
         switch self {
-        case .heading:
-            return "textformat.size.larger"      // Feels like a heading style
-        case .paragraph:
-            return "text.alignleft"              // Common paragraph alignment icon
-        case .thematicBreak:
-            return "line.horizontal.3"           // Visual horizontal divider
-        case .blockQuote:
-            return "text.quote"                   // Dedicated quote mark icon
-        case .codeBlock:
-            return "curlybraces.square"           // Matches code block visually
-        case .list:
-            return "list.bullet"                  // Standard list bullet icon
-        case .listItem:
-            return "list.bullet.circle"           // Matches list item but with emphasis
+        case .heading:          return "textformat.size.larger"
+        case .paragraph:        return "text.alignleft"
+        case .thematicBreak:    return "line.horizontal.3"
+        case .blockQuote:       return "text.quote"
+        case .codeBlock:        return "curlybraces.square"
+        case .list:             return "list.bullet"
+        case .listItem:         return "list.bullet.circle"
+        case .emphasis:         return "textformat.abc"
         }
     }
     
@@ -116,6 +111,16 @@ public enum CurrentlySupported: String, CaseIterable, Hashable {
             * Apples
             * Bananas
             * Cherries
+            """
+            ]
+        case .emphasis:
+            return [
+            """
+            This is *italic* text and this is **bold** text.
+            You can also use ***both*** together.
+            """,
+            """
+            _Italic_ and __bold__ are also supported.
             """
             ]
         }

@@ -5,6 +5,7 @@
 //  Created by Aryan Rogye on 8/12/25.
 //
 
+#if os(iOS)
 import UIKit
 import SwiftUI
 
@@ -143,3 +144,5 @@ extension Comparable {
         min(max(self, limits.lowerBound), limits.upperBound)
     }
 }
+
+#endif

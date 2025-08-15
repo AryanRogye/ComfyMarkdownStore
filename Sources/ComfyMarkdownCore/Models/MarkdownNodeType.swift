@@ -5,7 +5,7 @@
 //  Created by Aryan Rogye on 8/13/25.
 //
 
-public enum MarkdownNodeType: Equatable {
+public enum MarkdownNodeType: Equatable, Hashable {
     // ===== Block-level =====
     case document
     case blockQuote
@@ -40,6 +40,41 @@ public enum MarkdownNodeType: Equatable {
     
     // ===== None / Unknown =====
     case none
+}
+
+extension MarkdownNodeType {
+    public var label: String {
+        switch self {
+        case .document:                                                 return "Document"
+        case .blockQuote:                                               return "Block Quote"
+        case .list(let ordered, let start, let tight, let delimiter):   return "List"
+        case .listItem:                                                 return "List Item"
+        case .codeBlock(let info, let literal):                         return "Code Block"
+        case .htmlBlock(let string):                                    return "HTML Block"
+        case .customBlock(let onEnter, let onExit):                     return "Custom Block"
+        case .paragraph:                                                return "Paragraph"
+        case .heading(let level):                                       return "Heading Level \(level)"
+        case .thematicBreak:                                            return "Thematic Break"
+        case .footnoteDefinition:                                       return "Footnote Definition"
+        case .table_header:                                             return "Table Header"
+        case .table:                                                    return "Table"
+        case .tableRow(let header):                                     return "Table Row"
+        case .tableCell(let align):                                     return "Table Cell"
+        case .text(let string):                                         return "Text"
+        case .softBreak:                                                return "Soft Break"
+        case .lineBreak:                                                return "Line Break"
+        case .code(let string):                                         return "Code Block"
+        case .htmlInline(let string):                                   return "HTML Inline"
+        case .customInline(let onEnter, let onExit):                    return "Custom Inline"
+        case .emphasis:                                                 return "Emphasis"
+        case .strong:                                                   return "Strong"
+        case .link(let url, let title):                                 return "Link"
+        case .image(let url, let title):                                return "Image"
+        case .footnoteReference:                                        return "Footnote Reference"
+        case .attribute:                                                return "Attribute"
+        case .none:                                                     return "Unknown"
+        }
+    }
 }
 
 extension MarkdownNodeType: CustomStringConvertible {

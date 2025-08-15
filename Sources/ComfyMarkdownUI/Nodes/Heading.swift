@@ -26,12 +26,16 @@ public struct HeadingView: View {
     }
     
     public var body: some View {
-        Text(node.plainText)
-            .font(
-                theme.headingFont(
-                    for: level,
-                    maxHeadingSize: maxHeadingSize
-                )
+        HStack(alignment: .firstTextBaseline, spacing: 0) {
+            ForEach(node.children, id: \.self) { child in
+                RenderNodeView(node: child)
+            }
+        }
+        .font(
+            theme.headingFont(
+                for: level,
+                maxHeadingSize: maxHeadingSize
             )
+        )
     }
 }

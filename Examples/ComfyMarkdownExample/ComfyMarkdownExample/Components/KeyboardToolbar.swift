@@ -5,6 +5,7 @@
 //  Created by Aryan Rogye on 8/12/25.
 //
 
+#if os(iOS)
 import SwiftUI
 
 struct KeyboardToolbar: View {
@@ -48,3 +49,5 @@ struct KeyboardToolbar: View {
         }
     }
 }
+
+#endif

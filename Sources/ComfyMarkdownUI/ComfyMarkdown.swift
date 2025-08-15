@@ -8,6 +8,33 @@
 import SwiftUI
 import ComfyMarkdownCore
 
+@MainActor
+class DebugSettings: ObservableObject {
+    static let shared = DebugSettings()
+    @Published var showDebug = false
+}
+
+public struct DebugSwitcher<Content: View>: View {
+    // Store as closure
+    var content: () -> Content
+    
+    public init(
+        @ViewBuilder content: @escaping () -> Content
+    ) {
+        self.content = content
+    }
+    
+    public var body: some View {
+        Button(action: {
+            withAnimation(.interactiveSpring) {
+                DebugSettings.shared.showDebug.toggle()
+            }
+        }) {
+            content()
+        }
+    }
+}
+
 public struct ComfyMarkdown: View {
     
     @StateObject private var viewModel = ViewModel()

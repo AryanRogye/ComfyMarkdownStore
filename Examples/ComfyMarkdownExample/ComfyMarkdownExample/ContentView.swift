@@ -30,6 +30,9 @@ struct ContentView: View {
             ToolbarItem(placement: .automatic) {
                 fontSizePreview
             }
+            ToolbarItem(placement: .automatic) {
+                debugSwitcher
+            }
             ToolbarItem(placement: .navigation) {
                 modalButton
             }
@@ -62,9 +65,16 @@ struct ContentView: View {
             .lineLimit(1)
             .fixedSize()
     }
+    
     private var modalButton : some View {
         Button(action: viewModel.toggleSettings) {
             Image(systemName: "gear")
+        }
+    }
+    private var debugSwitcher: some View {
+        DebugSwitcher {
+            Image(systemName: "circle.fill")
+                .foregroundColor(.green)
         }
     }
     
@@ -72,6 +82,7 @@ struct ContentView: View {
     private var editingView: some View {
         ScrollView(.vertical, showsIndicators: true) {
             VStack(alignment: .leading, spacing: 10) {
+#if os(iOS)
                 CustomTextFieldWrapper(
                     textFieldText: $viewModel.text,
                     fontSize: $viewModel.fontSize,
@@ -80,6 +91,9 @@ struct ContentView: View {
                     viewModel.onClose()
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
+#else
+                TextEditor(text: $viewModel.text)
+#endif
             }
             .padding(.horizontal, 32)
         }
@@ -108,7 +122,7 @@ extension ContentView {
             
         ---
             
-        This is a paragraph.  
+        This is a paragraph.
         It can span multiple lines in the source file,  
         and Markdown will wrap it together when rendered.
             
@@ -140,6 +154,11 @@ extension ContentView {
         - ## Item 4
             - Item 5
                 - #### item 6
+        
+        ---
+        
+        ## *This* is a emphasized *Text*
+        **This** is a bold **Text**
             
         """
         

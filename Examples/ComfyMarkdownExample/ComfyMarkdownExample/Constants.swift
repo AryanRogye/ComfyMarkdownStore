@@ -16,16 +16,20 @@ enum AppAnim {
     )
 }
 
+#if os(iOS)
 enum Haptics {
     static func light() { UIImpactFeedbackGenerator(style: .light).impactOccurred() }
     static func medium() { UIImpactFeedbackGenerator(style: .medium).impactOccurred() }
     static func success() { UINotificationFeedbackGenerator().notificationOccurred(.success) }
 }
+#endif
 
 @MainActor
 enum Keyboard {
     static func hide() {
+#if os(iOS)
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder),
                                         to: nil, from: nil, for: nil)
+#endif
     }
 }
