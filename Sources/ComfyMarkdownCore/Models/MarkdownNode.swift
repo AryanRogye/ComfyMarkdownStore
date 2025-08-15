@@ -13,6 +13,11 @@ public struct MarkdownNode: Identifiable, Hashable {
     public var type: MarkdownNodeType
     public var children: [MarkdownNode] = []
     
+    public func child(at index: Int) -> MarkdownNode? {
+        guard index >= 0 && index < children.count else { return nil }
+        return children[index]
+    }
+    
     /// Function To Nicely Visualize Markdown
     public func visualizeAST(indentation: String = "") {
         // Print current node type

@@ -159,6 +159,8 @@ extension ContentView {
         
         ## *This* is a emphasized *Text*
         **This** is a bold **Text**
+        
+        **THIS IS BOLD**
             
         """
         

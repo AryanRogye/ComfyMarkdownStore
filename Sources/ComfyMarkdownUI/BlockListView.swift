@@ -51,7 +51,6 @@ public struct RenderNodeView: View {
             case .emphasis:                                             EmphasisView(node: node)
             case .strong  :                                             StrongView(node: node)
             case .text(let text):                                       Text(text)
-//            case .text(let text):                                       TextView(text: text, node: node)
             default:                                                    EmptyView()
                 
                 //

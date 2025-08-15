@@ -14,13 +14,33 @@ public struct ParagraphView: View {
     @Environment(\.markdownTheme) private var theme
     @Environment(\.maxFontSize) private var maxHeadingSize
     
+    @ObservedObject var debugSettings = DebugSettings.shared
+    
     public init(node: MarkdownNode) {
         self.node = node
     }
     
     public var body: some View {
-        renderInlineText(for: node) // <-- builds one styled Text
-            .font(theme.bodyFont(maxHeadingSize: maxHeadingSize))
+        VStack {
+#if DEBUG
+            if debugSettings.showDebug {
+                HStack(spacing: 4) {
+                    ForEach(node.children, id: \.self) { child in
+                        Text(child.type.label)
+                            .font(.caption2)
+                            .padding(2)
+                            .background(Color.yellow.opacity(0.3))
+                    }
+                }
+            }
+#endif
+            renderInlineText(for: node) // <-- builds one styled Text
+                .font(theme.bodyFont(maxHeadingSize: maxHeadingSize))
+        }
+#if DEBUG
+        .border(Color.black, width: debugSettings.showDebug ? 1 : 0)
+#endif
+
     }
     
     func renderInlineText(for node: MarkdownNode) -> Text {
