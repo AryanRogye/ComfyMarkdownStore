@@ -11,6 +11,7 @@ import ComfyMarkdownUI
 struct ContentView: View {
     
     @StateObject private var viewModel = ViewModel()
+    @StateObject private var markdownDocManager = MarkdownDocManager()
     
     var body: some View {
         VStack {
@@ -36,15 +37,52 @@ struct ContentView: View {
             ToolbarItem(placement: .navigation) {
                 modalButton
             }
+            ToolbarItem(placement: .navigation) {
+                storedButton
+            }
+            if viewModel.clickedDoc != nil {
+                ToolbarItem(placement: .automatic) {
+                    saveButton
+                }
+            }
         }
         .sheet(isPresented: $viewModel.isSettingsOpen) {
             NavigationStack {
                 SettingsView(viewModel: viewModel)
             }
         }
+        .sheet(isPresented: $viewModel.shouldShowStored) {
+            Stored(markdownDocManager, clickedDoc: { doc, content in
+                viewModel.clickedDoc = doc
+                viewModel.text = content
+                viewModel.shouldShowStored = false
+            })
+        }
     }
     
     // MARK: - Toolbar Button
+    private var saveButton: some View {
+        VStack {
+            if let doc = viewModel.clickedDoc {
+                Button(action: {
+                    markdownDocManager.saveContent(for: doc, with: viewModel.text)
+                    viewModel.text = viewModel.defaultText
+                    viewModel.clickedDoc = nil
+                }) {
+                    Text("Save")
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.5)
+                }
+            }
+        }
+    }
+    private var storedButton: some View {
+        Button(action: {
+            viewModel.shouldShowStored = true
+        }) {
+            Image(systemName: "archivebox.fill")
+        }
+    }
     private var toggleMarkdown: some View {
         Button(action: viewModel.toggleEditing) {
             Image(
@@ -107,11 +145,14 @@ struct ContentView: View {
 
 extension ContentView {
     class ViewModel: ObservableObject {
+        
+        @Published var clickedDoc: MarkdownDoc? = nil
+        @Published var shouldShowStored = false
         @Published var isEditing = false
         @Published var isFocused : Bool = false
         @Published var fontSize : CGFloat = 18.0
         @Published var isSettingsOpen : Bool = false
-        @Published var text : String = """
+        let defaultText: String = """
         # Test
         ## TEST
         ### Test
@@ -164,6 +205,11 @@ extension ContentView {
             
         """
         
+        @Published var text : String
+        
+        init() {
+            self.text = defaultText
+        }
         
         @MainActor
         public func onClose() {
