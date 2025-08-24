@@ -33,7 +33,7 @@ struct KeyboardToolbar: View {
     
     private var decreaseFontSize: some View {
         Button(action: {
-            fontSize = fontSize > 10 ? fontSize - 1 : fontSize
+            fontSize = fontSize > 1 ? fontSize - 1 : fontSize
         }) {
             Image(systemName: "minus.circle.fill")
                 .foregroundColor(.gray)

@@ -105,7 +105,7 @@ struct CustomTextFieldWrapper: UIViewRepresentable {
     
     private func normalizeFontSize() -> CGFloat {
         let adjusted = fontSize - 7
-        return adjusted.clamped(to: 8...72)
+        return adjusted.clamped(to: 1...72)
     }
     
     func makeCoordinator() -> Coordinator { Coordinator(self) }
