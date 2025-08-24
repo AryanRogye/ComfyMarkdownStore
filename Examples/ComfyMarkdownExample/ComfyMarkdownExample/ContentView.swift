@@ -118,7 +118,7 @@ struct ContentView: View {
     
     // MARK: - Editing View
     private var editingView: some View {
-        ScrollView(.vertical, showsIndicators: true) {
+        ScrollView([.vertical, .horizontal], showsIndicators: true) {
             VStack(alignment: .leading, spacing: 10) {
 #if os(iOS)
                 CustomTextFieldWrapper(
