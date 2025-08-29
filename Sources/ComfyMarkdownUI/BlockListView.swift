@@ -50,6 +50,10 @@ public struct RenderNodeView: View {
             case .listItem:                                             ListItemView(node: node)
             case .emphasis:                                             EmphasisView(node: node)
             case .strong  :                                             StrongView(node: node)
+                
+            case .htmlBlock(let literal):                                HTMLBlockView(literal: literal)
+            case .htmlInline(let literal):                               HTMLInlineView(literal: literal)
+                
             case .text(let text):                                       Text(text)
             default:                                                    EmptyView()
                 

@@ -66,8 +66,6 @@ struct ContentView: View {
             if let doc = viewModel.clickedDoc {
                 Button(action: {
                     markdownDocManager.saveContent(for: doc, with: viewModel.text)
-                    viewModel.text = viewModel.defaultText
-                    viewModel.clickedDoc = nil
                 }) {
                     Text("Save")
                         .lineLimit(1)
