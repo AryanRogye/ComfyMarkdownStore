@@ -66,11 +66,12 @@ struct SummaryRowView: View {
                 )
             if let label = summary.linkLabel,
                let url = summary.url {
-                if #available(iOS 16.0, *) {
+                if #available(iOS 16.0, macOS 13.0, *) {
                     Link(label, destination: url)
                         .font(.system(.body, design: .monospaced)) // matches <code> vibe
                         .underline()
-                } else {
+                }
+                else {
                     Link(label, destination: url)
                         .font(.system(.body, design: .monospaced)) // matches <code> vibe
                 }

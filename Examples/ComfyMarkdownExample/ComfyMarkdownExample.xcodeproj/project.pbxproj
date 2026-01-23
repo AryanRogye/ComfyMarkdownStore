@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		9B686FE62E4D941E00199AD4 /* ComfyMarkdownCore in Frameworks */ = {isa = PBXBuildFile; productRef = 9B686FE52E4D941E00199AD4 /* ComfyMarkdownCore */; };
 		9B686FE82E4D941E00199AD4 /* ComfyMarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = 9B686FE72E4D941E00199AD4 /* ComfyMarkdownUI */; };
+		9BBFF76C2F241AE8009D6345 /* ComfyMarkdownCore in Frameworks */ = {isa = PBXBuildFile; productRef = 9BBFF76B2F241AE8009D6345 /* ComfyMarkdownCore */; };
+		9BBFF76E2F241AE8009D6345 /* ComfyMarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = 9BBFF76D2F241AE8009D6345 /* ComfyMarkdownUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 			files = (
 				9B686FE82E4D941E00199AD4 /* ComfyMarkdownUI in Frameworks */,
 				9B686FE62E4D941E00199AD4 /* ComfyMarkdownCore in Frameworks */,
+				9BBFF76E2F241AE8009D6345 /* ComfyMarkdownUI in Frameworks */,
+				9BBFF76C2F241AE8009D6345 /* ComfyMarkdownCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +78,8 @@
 			packageProductDependencies = (
 				9B686FE52E4D941E00199AD4 /* ComfyMarkdownCore */,
 				9B686FE72E4D941E00199AD4 /* ComfyMarkdownUI */,
+				9BBFF76B2F241AE8009D6345 /* ComfyMarkdownCore */,
+				9BBFF76D2F241AE8009D6345 /* ComfyMarkdownUI */,
 			);
 			productName = ComfyMarkdownExample;
 			productReference = 9B686FD52E4D93E500199AD4 /* ComfyMarkdownExample.app */;
@@ -104,7 +110,7 @@
 			mainGroup = 9B686FCC2E4D93E500199AD4;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				9B686FE42E4D941E00199AD4 /* XCLocalSwiftPackageReference "../../../ComfyMarkdownStore" */,
+				9BBFF76A2F241AE8009D6345 /* XCLocalSwiftPackageReference "../../../ComfyMarkdownStore" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 9B686FD62E4D93E500199AD4 /* Products */;
@@ -357,7 +363,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		9B686FE42E4D941E00199AD4 /* XCLocalSwiftPackageReference "../../../ComfyMarkdownStore" */ = {
+		9BBFF76A2F241AE8009D6345 /* XCLocalSwiftPackageReference "../../../ComfyMarkdownStore" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../../../ComfyMarkdownStore;
 		};
@@ -369,6 +375,14 @@
 			productName = ComfyMarkdownCore;
 		};
 		9B686FE72E4D941E00199AD4 /* ComfyMarkdownUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ComfyMarkdownUI;
+		};
+		9BBFF76B2F241AE8009D6345 /* ComfyMarkdownCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ComfyMarkdownCore;
+		};
+		9BBFF76D2F241AE8009D6345 /* ComfyMarkdownUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = ComfyMarkdownUI;
 		};
