@@ -53,7 +53,6 @@ public struct RenderNodeView: View {
                 
             case .htmlBlock(let literal):                                HTMLBlockView(literal: literal)
             case .htmlInline(let literal):                               HTMLInlineView(literal: literal)
-                
             case .text(let text):                                       Text(text)
             default:                                                    EmptyView()
                 

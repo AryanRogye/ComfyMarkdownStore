@@ -51,6 +51,23 @@ public struct ParagraphView: View {
             return node.children.reduce(Text("")) { $0 + renderInlineText(for: $1).italic() }
         case .strong:
             return node.children.reduce(Text("")) { $0 + renderInlineText(for: $1).bold() }
+        case .link(let urlString, let title):
+            
+            let label = title ?? node.children.compactMap {
+                if case .text(let s) = $0.type { return s }
+                return nil
+            }.joined()
+            
+            var s = AttributedString(label.isEmpty ? urlString : label)
+            
+            let raw = urlString.trimmingCharacters(in: .whitespacesAndNewlines)
+            let fixed = (raw.hasPrefix("http://") || raw.hasPrefix("https://")) ? raw : "https://\(raw)"
+            
+            if let url = URL(string: fixed) {
+                s.link = url
+            }
+            return Text(s)
+            
             // ...add inline code, links, etc.
         default:
             return node.children.reduce(Text("")) { $0 + renderInlineText(for: $1) }
