@@ -75,6 +75,9 @@ public struct ComfyMarkdown: View {
         .task(id: text) {
             viewModel.handleParsingText(text)
         }
+        .onChange(of: text) { newValue in
+            viewModel.handleParsingText(newValue)
+        }
         .onChange(of: maxFontSize) { _ in
             viewModel.handleParsingText(text)
         }
