@@ -24,6 +24,14 @@ public struct RenderBlockListView: View {
             }
             .padding(.horizontal)
         }
+//        .environment(\.openURL, OpenURLAction { url in
+//            #if os(macOS)
+//            NSWorkspace.shared.open(url)
+//            #else
+//            UIApplication.shared.open(url)
+//            #endif
+//            return .handled // Returns the OpenURLAction.Result
+//        })
     }
 }
 

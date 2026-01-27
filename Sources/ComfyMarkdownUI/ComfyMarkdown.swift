@@ -40,10 +40,21 @@ public struct ComfyMarkdown: View {
     @StateObject private var viewModel = ViewModel()
     @Binding var maxFontSize : CGFloat
     
-    var text: String
+    private let textBinding: Binding<String>?
+    private let textValue: String
+    
+    private var text: String {
+        textBinding?.wrappedValue ?? textValue
+    }
     
     public init(text: String, maxFontSize: Binding<CGFloat> = .constant(18)) {
-        self.text = text
+        self.textValue = text
+        self.textBinding = nil
+        self._maxFontSize = maxFontSize
+    }
+    public init(text: Binding<String>, maxFontSize: Binding<CGFloat> = .constant(18)) {
+        self.textValue = ""
+        self.textBinding = text
         self._maxFontSize = maxFontSize
     }
     
@@ -89,9 +100,6 @@ extension ComfyMarkdown {
                 error = nil
             }
             /// Error Handling
-            catch {
-                showError("Error: \(error.localizedDescription)")
-            }
             catch let error as MarkdownASTError {
                 switch error {
                 case .invalidNode:
@@ -99,6 +107,9 @@ extension ComfyMarkdown {
                 case .unsupportedNodeType(let type):
                     showError("Unsupported Node Type: \(type)")
                 }
+            }
+            catch {
+                showError("Error: \(error.localizedDescription)")
             }
         }
     }
