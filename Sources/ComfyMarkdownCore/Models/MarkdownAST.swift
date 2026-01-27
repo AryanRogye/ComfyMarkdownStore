@@ -77,12 +77,13 @@ public struct MarkdownAST {
             throw MarkdownASTError.unsupportedNodeType(type: String(cString: cmark_node_get_type_string(node)))
         }
         
+        /// This stops live preview
         // Compare with old node before building children
-        if let old = lastMarkdownNode,
-           old.type == swiftType,
-           old.plainText == literalFromCMark(node) {
-            return old
-        }
+//        if let old = lastMarkdownNode,
+//           old.type == swiftType,
+//           old.plainText == literalFromCMark(node) {
+//            return old
+//        }
         
         var children: [MarkdownNode] = []
         var child = cmark_node_first_child(node)

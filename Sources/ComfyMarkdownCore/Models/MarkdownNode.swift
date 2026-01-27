@@ -8,7 +8,7 @@
 import Foundation
 
 /// Tree structure representing a Markdown document.
-public struct MarkdownNode: Identifiable, Hashable {
+public struct MarkdownNode: Identifiable, Hashable, Equatable {
     public let id: UUID = UUID()
     public var type: MarkdownNodeType
     public var children: [MarkdownNode] = []
