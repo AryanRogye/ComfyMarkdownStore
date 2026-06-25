@@ -11,80 +11,65 @@ import ComfyMarkdownUI
 struct SettingsView: View {
     
     @ObservedObject var viewModel: ContentView.ViewModel
+    @Environment(\.dismiss) var dismiss
     
     var body: some View {
-        VStack {
-            HStack {
-                Spacer()
-                close
-            }
-            .padding([.horizontal, .top])
-            
-            HStack {
-                Text("Supported Types:")
-                    .font(.system(size: 20, weight: .semibold))
-                    .foregroundColor(.primary)
-                Spacer()
-            }
-            .padding(.horizontal)
-            
-            supportedTypes
-            
-        }
-        .frame(
-            maxWidth: .infinity,
-            maxHeight: .infinity,
-            alignment: .leading
-        )
-    }
-    
-    private var supportedTypes: some View {
-        ScrollView {
-            ForEach(CurrentlySupported.allCases, id: \.self) { type in
-                NavigationLink(
-                    destination: SettingsSupportedTypeExampleView(examples: type.examples)
-                ) {
-                    item(for: type)
-                        .padding(.horizontal)
+        List {
+            Section {
+                VStack(alignment: .leading, spacing: 8) {
+                    Text("Comfy Markdown")
+                        .font(.system(size: 24, weight: .bold, design: .rounded))
+                    Text("A modern, modular markdown renderer for SwiftUI.")
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
                 }
-                .buttonStyle(.plain)
+                .padding(.vertical, 12)
+            }
+            
+            Section {
+                ForEach(CurrentlySupported.allCases, id: \.self) { type in
+                    NavigationLink(
+                        destination: SettingsSupportedTypeExampleView(examples: type.examples)
+                    ) {
+                        Label {
+                            Text(type.rawValue)
+                                .font(.body)
+                        } icon: {
+                            Image(systemName: type.icon)
+                                .foregroundColor(.white)
+                                .font(.system(size: 14, weight: .semibold))
+                                .frame(width: 28, height: 28)
+                                .background(Color.blue, in: RoundedRectangle(cornerRadius: 8, style: .continuous))
+                        }
+                    }
+                }
+            } header: {
+                Text("Supported Syntax")
+            } footer: {
+                Text("More syntax support is being added in future updates.")
+            }
+            
+            Section {
+                Button(role: .destructive) {
+                    // Placeholder for clearing cache or something
+                } label: {
+                    Label("Clear Local Cache", systemImage: "trash")
+                }
+            } header: {
+                Text("Data Management")
             }
         }
-    }
-    
-    private func item(for type: CurrentlySupported) -> some View {
-        HStack(spacing: 16) {
-            Image(systemName: type.icon)
-                .foregroundColor(.white)
-                .font(.system(size: 16, weight: .semibold))
-                .frame(width: 32, height: 32)
-                .background(Color.accentColor, in: Circle())
-            
-            Text(type.rawValue)
-                .font(.system(size: 16))
-                .foregroundColor(.primary)
-            
-            Spacer()
-            
-            Image(systemName: "chevron.right")
-                .foregroundColor(.secondary)
+        .navigationTitle("Settings")
+        .toolbar {
+            ToolbarItem(placement: .confirmationAction) {
+                Button("Done") {
+                    dismiss()
+                }
+            }
         }
-        .padding(.vertical, 10)
-        .contentShape(Rectangle()) // full row tap target
-    }
-    
-    private var close: some View {
-        Button(action: viewModel.toggleSettings) {
-            Image(systemName: "xmark")
-                .font(.system(size: 16, weight: .semibold))
-                .foregroundColor(.primary)
-                .padding(8)
-                .background(.thinMaterial, in: Circle())
-        }
-        .buttonStyle(.plain)
-        .frame(maxWidth: .infinity, alignment: .topTrailing)
     }
 }
+
 
 
 struct SettingsSupportedTypeExampleView: View {
