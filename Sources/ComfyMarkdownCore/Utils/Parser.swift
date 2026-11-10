@@ -36,7 +36,8 @@ public class Parser {
     }
     
     public func parse(_ markdown: String) throws -> MarkdownNode? {
-        cmark_parser_feed(parser, markdown, markdown.utf8.count)
+        let normalizedMarkdown = normalizeIndentedOrderedLists(markdown)
+        cmark_parser_feed(parser, normalizedMarkdown, normalizedMarkdown.utf8.count)
         let root = cmark_parser_finish(parser)
         
         guard let root = root else {
@@ -51,5 +52,23 @@ public class Parser {
         
         lastMarkdownNode = ast
         return ast
+    }
+    
+    private func normalizeIndentedOrderedLists(_ markdown: String) -> String {
+        let lines = markdown.components(separatedBy: "\n")
+        var normalizedLines: [String] = []
+        
+        for line in lines {
+            let shouldPromoteToNestedItem =
+                line.range(of: #"^ {2}\d+[.)]\s+"#, options: .regularExpression) != nil &&
+                normalizedLines.last { !$0.trimmingCharacters(in: .whitespaces).isEmpty }.map { previousLine in
+                    previousLine.range(of: #"^\d+[.)]\s+"#, options: .regularExpression) != nil ||
+                    previousLine.range(of: #"^ {3}\d+[.)]\s+"#, options: .regularExpression) != nil
+                } == true
+            
+            normalizedLines.append(shouldPromoteToNestedItem ? " \(line)" : line)
+        }
+        
+        return normalizedLines.joined(separator: "\n")
     }
 }

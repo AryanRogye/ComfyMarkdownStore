@@ -45,6 +45,12 @@ public struct ParagraphView: View {
     
     func renderInlineText(for node: MarkdownNode) -> Text {
         switch node.type {
+        case .code(let string):
+            var attr = AttributedString(string)
+            attr.font = .system(.caption, design: .monospaced)
+            attr.backgroundColor = .secondary.opacity(0.3)
+            
+            return Text(attr)
         case .text(let string):
             return Text(string)
         case .emphasis:

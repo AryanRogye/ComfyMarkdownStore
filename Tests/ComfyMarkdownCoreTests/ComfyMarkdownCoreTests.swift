@@ -179,9 +179,33 @@ final class ComfyMarkdownCoreTests: XCTestCase {
         
         for i in 0..<3 {
             let listItem = list.children[i]
-            XCTAssertEqual(listItem.type, .listItem)
+            XCTAssertEqual(listItem.type, .listItem(checked: nil))
             XCTAssertEqual(listItem.children.first?.children.first?.type, .text("Item \(i + 1)"))
         }
+    }
+    
+    func testTaskListItems() throws {
+        let markdown = """
+        - [ ] Todo
+        - [x] Done
+        - [X] Also done
+        - Not a task
+        """
+        
+        let ast = try XCTUnwrap(comfyMarkdownCore.parse(markdown: markdown))
+        
+        let list = ast.children[0]
+        XCTAssertEqual(list.children.count, 4)
+        XCTAssertEqual(list.children[0].type, .listItem(checked: false))
+        XCTAssertEqual(list.children[0].sourceRange?.startLine, 1)
+        XCTAssertEqual(list.children[0].children.first?.children.first?.type, .text("Todo"))
+        XCTAssertEqual(list.children[1].type, .listItem(checked: true))
+        XCTAssertEqual(list.children[1].sourceRange?.startLine, 2)
+        XCTAssertEqual(list.children[1].children.first?.children.first?.type, .text("Done"))
+        XCTAssertEqual(list.children[2].type, .listItem(checked: true))
+        XCTAssertEqual(list.children[2].children.first?.children.first?.type, .text("Also done"))
+        XCTAssertEqual(list.children[3].type, .listItem(checked: nil))
+        XCTAssertEqual(list.children[3].children.first?.children.first?.type, .text("Not a task"))
     }
     
     func testOrderedList() throws {
@@ -219,6 +243,29 @@ final class ComfyMarkdownCoreTests: XCTestCase {
         XCTAssertEqual(nestedList.children.count, 2)
     }
     
+    func testIndentedOrderedListStartsNestedList() throws {
+        let markdown = """
+        1. This is some text that 
+        2. This is some text that 
+        3. This is some txt that 
+          1. something here
+          2. something here
+          3. something here
+        """
+        
+        let ast = try XCTUnwrap(comfyMarkdownCore.parse(markdown: markdown))
+        let list = ast.children[0]
+        XCTAssertEqual(list.type, .list(ordered: true, start: 1, tight: true, delimiter: "."))
+        XCTAssertEqual(list.children.count, 3)
+        
+        let thirdItem = list.children[2]
+        XCTAssertEqual(thirdItem.children.count, 2)
+        
+        let nestedList = thirdItem.children[1]
+        XCTAssertEqual(nestedList.type, .list(ordered: true, start: 1, tight: true, delimiter: "."))
+        XCTAssertEqual(nestedList.children.count, 3)
+    }
+    
     func testLooseList() throws {
         let markdown = """
         - Item 1
@@ -244,6 +291,20 @@ final class ComfyMarkdownCoreTests: XCTestCase {
         XCTAssertEqual(paragraphChildren[0].type, .text("Use the "))
         XCTAssertEqual(paragraphChildren[1].type, .code("print()"))
         XCTAssertEqual(paragraphChildren[2].type, .text(" function to output text."))
+    }
+    
+    func testBackticksAreSavedAsInlineCodeNode() throws {
+        let markdown = "This is `code`"
+        let ast = try XCTUnwrap(comfyMarkdownCore.parse(markdown: markdown))
+        
+        XCTAssertEqual(ast.type, .document)
+        XCTAssertEqual(ast.children.count, 1)
+        
+        let paragraph = ast.children[0]
+        XCTAssertEqual(paragraph.type, .paragraph)
+        XCTAssertEqual(paragraph.children.count, 2)
+        XCTAssertEqual(paragraph.children[0].type, .text("This is "))
+        XCTAssertEqual(paragraph.children[1].type, .code("code"))
     }
     
     func testCodeBlock() throws {

@@ -31,7 +31,9 @@ struct Stored: View {
     
     var body: some View {
         ZStack {
+            #if os(macOS)
             Color(NSColor.windowBackgroundColor).ignoresSafeArea()
+            #endif
             
             VStack(spacing: 0) {
                 header
@@ -59,7 +61,12 @@ struct Stored: View {
                         .textFieldStyle(.plain)
                 }
                 .padding(12)
-                .background(Color(NSColor.controlBackgroundColor))
+                .background{
+                    
+#if os(macOS)
+                    Color(NSColor.controlBackgroundColor)
+#endif
+                }
                 .cornerRadius(12)
                 .overlay(
                     RoundedRectangle(cornerRadius: 12)
@@ -88,7 +95,11 @@ struct Stored: View {
         }
         .padding(.horizontal, 24)
         .padding(.bottom, 20)
-        .background(Color(NSColor.windowBackgroundColor))
+        .background{
+#if os(macOS)
+            Color(NSColor.windowBackgroundColor)
+#endif
+        }
     }
     
     private var documentList: some View {
@@ -161,7 +172,11 @@ struct DocumentCard: View {
                     .foregroundColor(.secondary.opacity(0.5))
             }
             .padding(16)
-            .background(Color(NSColor.controlBackgroundColor))
+            .background {
+#if os(macOS)
+                Color(NSColor.controlBackgroundColor)
+#endif
+            }
             .cornerRadius(14)
             .overlay(
                 RoundedRectangle(cornerRadius: 14)

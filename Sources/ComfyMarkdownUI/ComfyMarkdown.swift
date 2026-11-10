@@ -62,7 +62,8 @@ public struct ComfyMarkdown: View {
             }
             else if let root = viewModel.root {
                 RenderBlockListView(
-                    nodes: root.children
+                    nodes: root.children,
+                    onToggleTaskItem: toggleTaskItem
                 )
                 .environment(\.maxFontSize, maxFontSize)
             } else {
@@ -76,6 +77,69 @@ public struct ComfyMarkdown: View {
         .onChange(of: text) { value in
             viewModel.textPublisher.send(value)
         }
+    }
+    
+    private func toggleTaskItem(_ node: MarkdownNode) {
+        print("Toggled Task Item: \(node)")
+        guard let updatedText = TaskMarkdownToggler.toggledMarkdown(text: text, node: node) else {
+            return
+        }
+        
+        text = updatedText
+        viewModel.text = updatedText
+        viewModel.handleParsingText()
+    }
+    
+}
+
+enum TaskMarkdownToggler {
+    static func toggledMarkdown(text: String, node: MarkdownNode) -> String? {
+        guard case .listItem(let checked) = node.type,
+              let checked,
+              let lineIndex = node.taskMarkerLineIndex else {
+            return nil
+        }
+        
+        var lines = text.components(separatedBy: "\n")
+        guard lineIndex >= 0, lineIndex < lines.count else {
+            return nil
+        }
+        
+        let line = lines[lineIndex]
+        guard let match = Self.taskMarkerRegex.firstMatch(
+            in: line,
+            range: NSRange(location: 0, length: (line as NSString).length)
+        ) else {
+            return nil
+        }
+        
+        let nsLine = line as NSString
+        let prefix = nsLine.substring(with: match.range(at: 1))
+        let replacement = "\(prefix)[\(checked ? " " : "x")]"
+        
+        guard let markerRange = Range(match.range, in: line) else {
+            return nil
+        }
+        
+        lines[lineIndex].replaceSubrange(markerRange, with: replacement)
+        return lines.joined(separator: "\n")
+    }
+    
+    private static let taskMarkerRegex = try! NSRegularExpression(
+        pattern: #"^(\s*(?:[-+*]|\d+[.)])\s+)\[[ xX]\]"#
+    )
+}
+
+private extension MarkdownNode {
+    var taskMarkerLineIndex: Int? {
+        if let sourceRange {
+            return sourceRange.startLine - 1
+        }
+        
+        return children.lazy
+            .compactMap(\.sourceRange)
+            .map { $0.startLine - 1 }
+            .first
     }
 }
 

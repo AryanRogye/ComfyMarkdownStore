@@ -47,6 +47,9 @@ let package = Package(
                 // .process("Resources")
             ]
         ),
-        /// No Tests for ComfyMarkdownUI yet
+        .testTarget(
+            name: "ComfyMarkdownUITests",
+            dependencies: ["ComfyMarkdownUI", "ComfyMarkdownCore"]
+        )
     ]
 )

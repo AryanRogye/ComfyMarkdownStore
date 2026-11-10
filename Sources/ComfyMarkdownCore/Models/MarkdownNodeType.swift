@@ -10,7 +10,7 @@ public enum MarkdownNodeType: Equatable, Hashable {
     case document
     case blockQuote
     case list(ordered: Bool, start: Int, tight: Bool, delimiter: String?)
-    case listItem
+    case listItem(checked: Bool? = nil)
     case codeBlock(info: String?, literal: String)
     case htmlBlock(String)
     case customBlock(onEnter: String?, onExit: String?)
@@ -87,7 +87,11 @@ extension MarkdownNodeType: CustomStringConvertible {
         case .emphasis:                                         return "(emphasis)"
         case .strong:                                           return "(strong)"
         case .list(let ordered, let start, _, let delimiter):   return "(list ordered=\(ordered) start=\(start) delimiter=\(delimiter ?? "nil"))"
-        case .listItem:                                         return "(list_item)"
+        case .listItem(let checked):
+            if let checked {
+                return "(task_list_item checked=\(checked))"
+            }
+            return "(list_item)"
         case .codeBlock(let info, let literal):                 return "(code_block info=\(info ?? "nil") literal=\"\(literal)\")"
         case .link(let url, let title):                         return "(link url=\(url) title=\(title))"
         case .image(let url, let title):                        return "(image url=\(url) title=\(title))"

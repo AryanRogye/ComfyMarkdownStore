@@ -77,7 +77,11 @@ struct ContentView: View {
         }
         .padding(.horizontal, 24)
         .padding(.vertical, 12)
-        .background(Color(NSColor.windowBackgroundColor))
+        .background {
+            #if os(macOS)
+            Color(NSColor.windowBackgroundColor)
+            #endif
+        }
         .overlay(Divider(), alignment: .bottom)
     }
     
@@ -139,7 +143,7 @@ struct ContentView: View {
     private var debugSwitcher: some View {
         DebugSwitcher {
             Image(systemName: "ant.fill")
-                .foregroundColor(DebugSettings.shared.showDebug ? .orange : .secondary)
+//                .foregroundColor(DebugSettings.shared.showDebug ? .orange : .secondary)
         }
         .help("Toggle Debug Mode")
     }
@@ -168,10 +172,14 @@ struct ContentView: View {
     // MARK: - Markdown View
     private var markdownView: some View {
         ScrollView {
-            ComfyMarkdown(text: viewModel.text, maxFontSize: $viewModel.fontSize)
+            ComfyMarkdown(text: $viewModel.text, maxFontSize: $viewModel.fontSize)
                 .padding(24)
         }
-        .background(Color(NSColor.windowBackgroundColor))
+        .background{
+#if os(macOS)
+            Color(NSColor.windowBackgroundColor)
+#endif
+        }
     }
 }
 
@@ -185,58 +193,74 @@ extension ContentView {
         @Published var fontSize : CGFloat = 18.0
         @Published var isSettingsOpen : Bool = false
         let defaultText: String = """
-        # Test
-        ## TEST
-        ### Test
-        #### Test
-        #### Test
-        ##### Test
-        ###### Test
+        # Markdown Torture Test
         
-        [THIS IS A EXAMPLE](https://canvas.uic.edu/courses/30691)
-            
+        ## Inline
+        
+        Normal **bold** text.
+        
+        Normal *italic* text.
+        
+        ***bold italic together***
+        
+        Nested: **bold with *italic inside*** end.
+        
+        Inline code: `let x = 10`
+        
+        Escaped symbols:
+        
+        strikethrough
+        
         ---
-            
-        This is a paragraph.
-        It can span multiple lines in the source file,  
-        and Markdown will wrap it together when rendered.
-            
-        ***
-            
-        This is a second paragraph, because it’s separated by a blank line.
-            
+        
+        ## Links
+        
+        [Normal Link](https://apple.com)
+                      
+                      [Link with **bold text**](https://apple.com)
+                                                
+                            Bare URL:https://apple.com
+                                                
+                                                ---
+                                                
+                                            ## Lists
+                                                
+                                                - Item 1
+                                                - Item 2
+                                                - Nested 1
+                                                - Nested 2
+                                                - Nested 3
+                                                
+                                                1. First
+                                                2. Second
+                                                3. Third
+                                                
+                                                Task list:
+                                                    
+                                                    - [x] Done
+                                                - [ ] Not Done
+                                                
+                                                ---
+                                                
+                                                ## Quotes
+                                                
+                                                > Simple quote
+                                                
+                                                > Quote with **bold**
+                                                > and multiple lines
+                                                
+                                                > Nested
+                                                >> Quote
+                                                
         ---
-            
-        > This is a BlockQuoteView
-        > With Another one
-            
-        > Testing With Detached
-        > Lines in between
-            
-        ---
-            
+                                                
+        ## Code Blocks
+                                                
         ```swift
-            let test = Test()
+        struct Test {
+            let value: String
+        }
         ```
-            
-        ---
-            
-        - # Item 1
-            - Item 2
-            - item 3
-        - ## item 2
-            - item 3
-        - ## Item 4
-            - Item 5
-                - #### item 6
-        
-        ---
-        
-        ## *This* is a emphasized *Text*
-        **This** is a bold **Text**
-        
-        **THIS IS BOLD**
-            
         """
         
         @Published var text : String

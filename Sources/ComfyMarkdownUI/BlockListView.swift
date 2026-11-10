@@ -10,33 +10,34 @@ import ComfyMarkdownCore
 
 public struct RenderBlockListView: View {
     var nodes: [MarkdownNode]
+    var onToggleTaskItem: ((MarkdownNode) -> Void)?
     
-    public init(nodes: [MarkdownNode]) {
+    public init(
+        nodes: [MarkdownNode],
+        onToggleTaskItem: ((MarkdownNode) -> Void)? = nil
+    ) {
         self.nodes = nodes
+        self.onToggleTaskItem = onToggleTaskItem
     }
     
     public var body: some View {
         ScrollView(.vertical, showsIndicators: true) {
             LazyVStack(alignment: .leading, spacing: 10) {
                 ForEach(nodes) { node in
-                    RenderNodeView(node: node)
+                    RenderNodeView(
+                        node: node,
+                        onToggleTaskItem: onToggleTaskItem
+                    )
                 }
             }
             .padding(.horizontal)
         }
-//        .environment(\.openURL, OpenURLAction { url in
-//            #if os(macOS)
-//            NSWorkspace.shared.open(url)
-//            #else
-//            UIApplication.shared.open(url)
-//            #endif
-//            return .handled // Returns the OpenURLAction.Result
-//        })
     }
 }
 
 public struct RenderNodeView: View {
     let node: MarkdownNode
+    var onToggleTaskItem: ((MarkdownNode) -> Void)?
     
     @ObservedObject var debugSettings = DebugSettings.shared
     
@@ -54,11 +55,10 @@ public struct RenderNodeView: View {
             case .thematicBreak:                                        ThematicBreakView()
             case .blockQuote:                                           BlockquoteView(node: node)
             case .codeBlock(let info, let literal):                     CodeBlockView(literal: literal, info: info)
-            case .list(let ordered,let start,let tight,let delimiter):  ListView(delimiter: delimiter, ordered: ordered, start: start, tight: tight, node: node)
-            case .listItem:                                             ListItemView(node: node)
+            case .list(let ordered,let start,let tight,let delimiter):  ListView(delimiter: delimiter, ordered: ordered, start: start, tight: tight, node: node, onToggleTaskItem: onToggleTaskItem)
+            case .listItem:                                             ListItemView(node: node, onToggleTaskItem: onToggleTaskItem)
             case .emphasis:                                             EmphasisView(node: node)
             case .strong  :                                             StrongView(node: node)
-                
             case .htmlBlock(let literal):                                HTMLBlockView(literal: literal)
             case .htmlInline(let literal):                               HTMLInlineView(literal: literal)
             case .text(let text):                                       Text(text)

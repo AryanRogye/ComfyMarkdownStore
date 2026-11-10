@@ -14,16 +14,25 @@ public struct ListView: View {
     var start: Int
     var tight: Bool
     var node: MarkdownNode
+    var onToggleTaskItem: ((MarkdownNode) -> Void)?
     
     @Environment(\.markdownTheme) private var theme
     @Environment(\.maxFontSize) private var maxHeadingSize
 
-    public init(delimiter: String? = nil, ordered: Bool, start: Int, tight: Bool, node: MarkdownNode) {
+    public init(
+        delimiter: String? = nil,
+        ordered: Bool,
+        start: Int,
+        tight: Bool,
+        node: MarkdownNode,
+        onToggleTaskItem: ((MarkdownNode) -> Void)? = nil
+    ) {
         self.delimiter = delimiter
         self.ordered = ordered
         self.start = start
         self.tight = tight
         self.node  = node
+        self.onToggleTaskItem = onToggleTaskItem
     }
     
     public var body: some View {
@@ -33,23 +42,52 @@ public struct ListView: View {
                     alignment: .firstTextBaseline,
                     spacing: 8
                 ) {
-                    Text(ordered ? "\(start + idx)." : "•")
-                        .font(
-                            theme.bodyFont(
-                                maxHeadingSize: maxHeadingSize
-                            )
-                        )
-                        .frame(alignment: .leading)
+                    markerView(for: child, at: idx)
                     
                     RenderNodeView(
-                        node: child
+                        node: child,
+                        onToggleTaskItem: onToggleTaskItem
                     )
                 }
                 .frame(
                     maxWidth: .infinity,
                     alignment: .leading
                 )
+                .contentShape(Rectangle())
+                .onTapGesture {
+                    if child.isTaskListItem {
+                        onToggleTaskItem?(child)
+                    }
+                }
             }
         }
+    }
+    
+    @ViewBuilder
+    private func markerView(for node: MarkdownNode, at index: Int) -> some View {
+        if case .listItem(let checked) = node.type, let checked {
+            Image(systemName: checked ? "checkmark.square.fill" : "square")
+                .font(theme.bodyFont(maxHeadingSize: maxHeadingSize))
+                .foregroundColor(checked ? .accentColor : .secondary)
+                .frame(width: 20, alignment: .leading)
+            .accessibilityLabel(checked ? "Checked" : "Unchecked")
+        } else {
+            Text(ordered ? "\(start + index)." : "•")
+                .font(
+                    theme.bodyFont(
+                        maxHeadingSize: maxHeadingSize
+                    )
+                )
+                .frame(alignment: .leading)
+        }
+    }
+}
+
+private extension MarkdownNode {
+    var isTaskListItem: Bool {
+        if case .listItem(let checked) = type {
+            return checked != nil
+        }
+        return false
     }
 }

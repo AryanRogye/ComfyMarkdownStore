@@ -106,12 +106,34 @@ public struct MarkdownAST {
             oldChildIndex += 1
         }
         
-        return MarkdownNode(type: swiftType, children: children)
+        return MarkdownNode(
+            type: swiftType,
+            children: children,
+            sourceRange: sourceRange(for: node)
+        )
     }
     
     private static func literalFromCMark(_ node: UnsafeMutablePointer<cmark_node>) -> String {
         guard let lit = cmark_node_get_literal(node) else { return "" }
         return String(cString: lit)
+    }
+    
+    private static func sourceRange(for node: UnsafeMutablePointer<cmark_node>) -> MarkdownSourceRange? {
+        let startLine = Int(cmark_node_get_start_line(node))
+        let startColumn = Int(cmark_node_get_start_column(node))
+        let endLine = Int(cmark_node_get_end_line(node))
+        let endColumn = Int(cmark_node_get_end_column(node))
+        
+        guard startLine > 0, startColumn > 0, endLine > 0, endColumn > 0 else {
+            return nil
+        }
+        
+        return MarkdownSourceRange(
+            startLine: startLine,
+            startColumn: startColumn,
+            endLine: endLine,
+            endColumn: endColumn
+        )
     }
 }
 
@@ -159,7 +181,9 @@ extension MarkdownAST {
             return .list(ordered: ordered, start: start, tight: tight, delimiter: delim)
             
         case CMARK_NODE_ITEM:
-            return .listItem
+            let isTaskListItem = typeString == "tasklist"
+            let checked = isTaskListItem ? cmark_gfm_extensions_get_tasklist_item_checked(node) : nil
+            return .listItem(checked: checked)
             
         case CMARK_NODE_CODE_BLOCK:
             let info = cmark_node_get_fence_info(node).flatMap { String(cString: $0) }
@@ -182,7 +206,7 @@ extension MarkdownAST {
             
         case CMARK_NODE_THEMATIC_BREAK:
             return .thematicBreak
-            
+        
         case CMARK_NODE_FOOTNOTE_DEFINITION:
             return .footnoteDefinition
             

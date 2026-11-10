@@ -10,15 +10,23 @@ import ComfyMarkdownCore
 
 public struct ListItemView: View {
     var node: MarkdownNode
+    var onToggleTaskItem: ((MarkdownNode) -> Void)?
     
-    public init(node: MarkdownNode) {
+    public init(
+        node: MarkdownNode,
+        onToggleTaskItem: ((MarkdownNode) -> Void)? = nil
+    ) {
         self.node = node
+        self.onToggleTaskItem = onToggleTaskItem
     }
     
     public var body: some View {
         VStack(alignment: .leading, spacing: 4) {
             ForEach(node.children) { child in
-                RenderNodeView(node: child)
+                RenderNodeView(
+                    node: child,
+                    onToggleTaskItem: onToggleTaskItem
+                )
             }
         }
     }

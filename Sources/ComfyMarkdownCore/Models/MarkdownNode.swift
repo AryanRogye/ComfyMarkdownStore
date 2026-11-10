@@ -7,11 +7,36 @@
 
 import Foundation
 
+public struct MarkdownSourceRange: Hashable, Equatable {
+    public var startLine: Int
+    public var startColumn: Int
+    public var endLine: Int
+    public var endColumn: Int
+    
+    public init(startLine: Int, startColumn: Int, endLine: Int, endColumn: Int) {
+        self.startLine = startLine
+        self.startColumn = startColumn
+        self.endLine = endLine
+        self.endColumn = endColumn
+    }
+}
+
 /// Tree structure representing a Markdown document.
 public struct MarkdownNode: Identifiable, Hashable, Equatable {
     public let id: UUID = UUID()
     public var type: MarkdownNodeType
     public var children: [MarkdownNode] = []
+    public var sourceRange: MarkdownSourceRange?
+    
+    public init(
+        type: MarkdownNodeType,
+        children: [MarkdownNode] = [],
+        sourceRange: MarkdownSourceRange? = nil
+    ) {
+        self.type = type
+        self.children = children
+        self.sourceRange = sourceRange
+    }
     
     public func child(at index: Int) -> MarkdownNode? {
         guard index >= 0 && index < children.count else { return nil }
