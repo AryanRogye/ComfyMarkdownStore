@@ -77,6 +77,7 @@ public struct RenderNodeView: View {
                 //            EmptyView()
             }
         }
+        .textSelection(.enabled)
 #if DEBUG
         .border(Color.black, width: debugSettings.showDebug ? 1 : 0)
 #endif

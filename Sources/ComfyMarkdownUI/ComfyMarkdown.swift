@@ -190,7 +190,7 @@ extension ComfyMarkdown {
                 case .invalidNode:
                     showError("Invalid Node")
                 case .unsupportedNodeType(let type):
-                    showError("Unsupported Node Type: \(type)")
+                    showError("Unsupported Node Type: \(type ?? "")")
                 }
             }
             catch {
